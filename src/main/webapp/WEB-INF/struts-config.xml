@@ -29,6 +29,10 @@
         <action name="MagasinActionForm" path="/Magasin" scope="session" type="servlets.referentiels.magasins.MagasinAction">
             <forward name="success" path="/jsp/test.jsp" />
         </action>
+        <action name="MagasinActionForm" path="/FormTarifs" scope="session" type="servlets.referentiels.tarifsLivraison.FormulaireAction">
+            <forward name="success" path="/jsp/test.jsp" />
+        </action>
+        
     </action-mappings>
 
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

@@ -4,6 +4,10 @@ import Entites.Personne;
 
 public class TestStrutsActionForm extends org.apache.struts.action.ActionForm {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String message;
 	private Personne[] p;
 	

@@ -8,7 +8,8 @@
 <struts-config>
     <form-beans>
         <form-bean name="TestStrutsActionForm" type="servlets.TestStrutsActionForm"/>
-
+        <form-bean name="MagasinActionForm" type="servlets.referentiels.magasins.TestStrutsActionForm"/>
+        <form-bean name="Formulaire" type="servlets.referentiels.tarifsLivraison.Formulaire"/>
     </form-beans>
 
     <global-exceptions>

@@ -1,4 +1,4 @@
-package Entites
+package Entites;
 
 public class Profil {
 

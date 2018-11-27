@@ -22,7 +22,7 @@
 
 	<h1>Créer magasin</h1>	
 	<html:form action="Magasin.do">
-		<html:text property="Magasin"></html:text>
+		<html:text property="magasin"></html:text>
 		<html:submit>Envoyer</html:submit>
 	</html:form>
 	

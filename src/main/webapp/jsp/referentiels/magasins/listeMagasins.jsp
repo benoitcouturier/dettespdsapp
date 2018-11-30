@@ -5,7 +5,7 @@
 <html>
 <%@ include file="/html/common/header.html"%>
 <%@ include file="/jsp/common/nav.jsp"%>
-<%@ include file="/html/accueilLink_js_css.html"%>
+<%@ include file="/html/referentiels/magasins/listeMagasinsLink_js_css.html"%>
 
 <body>
 

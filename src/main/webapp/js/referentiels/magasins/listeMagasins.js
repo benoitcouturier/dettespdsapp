@@ -3,9 +3,9 @@ $(document).ready(function(){
 	console.log($( "#btnRecherche"));
 });
 
-$(document).ready(function(){
-	$("#btnRecherche")[0].click(function() {
-		console.log('yes');
-	  $( "#divRecherche" ).toggle( "slow" );
-	});
+
+$("#btnRecherche").click(function() {
+	console.log('yes');
+	$( "#divRecherche" ).toggle( "slow" );
 });
+

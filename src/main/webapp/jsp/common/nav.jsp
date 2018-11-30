@@ -4,7 +4,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">X-MALL</a>
+      <a class="navbar-brand" href="Accueil.do">X-MALL</a>
     </div>
     <ul id="listeLienNav" class="nav navbar-nav">
       <li><a href="Accueil.do">Home</a></li>

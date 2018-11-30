@@ -34,7 +34,7 @@
 								src="https://image.tmdb.org/t/p/w1280/9GJgBfqeK0D7lQWeCLPJz1QLmBF.jpg"
 								style="width: 100%" class="img-responsive" alt="Image">
 							<div class="carousel-caption">
-								<h3>Noël</h3>
+								<h3>Noel</h3>
 								<p>Prenez vous en Photo avec le père Noël</p>
 							</div>
 						</div>

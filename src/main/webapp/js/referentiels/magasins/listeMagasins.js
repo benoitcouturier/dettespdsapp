@@ -3,5 +3,6 @@ $(document).ready(function(){
 })
 
 $( "#btnRecherche").click(function() {
+	console.log('yes');
   $( "#divRecherche" ).toggle( "slow" );
 });

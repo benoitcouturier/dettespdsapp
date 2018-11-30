@@ -21,7 +21,7 @@
     </global-forwards>
 
     <action-mappings>
-        <action input="/index.jsp" name="TestStrutsActionForm" path="/TestStruts" scope="session" type="servlets.TestStrutsAction">
+        <action name="TestStrutsActionForm" path="/TestStruts" scope="session" type="servlets.TestStrutsAction">
             <forward name="success" path="/jsp/test.jsp" />
         </action>
         <action name="TestStrutsActionForm" path="/Form" scope="session" type="servlets.FormulaireAction">
@@ -32,6 +32,9 @@
         </action>
         <action name="Formulaire" path="/FormTarifs" scope="session" type="servlets.referentiels.tarifsLivraison.FormulaireAction">
             <forward name="success" path="/jsp/test.jsp" />
+        </action>
+        <action name="TestStrutsActionForm" path="/Accueil" scope="session" type="servlets.AccueilAction">
+            <forward name="success" path="/jsp/accueil.jsp" />
         </action>
         
     </action-mappings>

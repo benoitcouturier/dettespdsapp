@@ -58,12 +58,12 @@
 				<br>
 				<div class="row">
 					<div class="col-sm-4">
-						<img src="/image/accueil/histoire-d-or-310.jpeg"
+						<img src="/X-MALL-APP/image/accueil/histoire-d-or-310.jpeg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						<p>150 Magasins différents</p>
 					</div>
 					<div class="col-sm-4">
-						<img src="/image/accueil/magasin-bio-natureo-06.jpg"
+						<img src="/X-MALL-APP/image/accueil/magasin-bio-natureo-06.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						<p>Des milliers d'articles</p>
 					</div>

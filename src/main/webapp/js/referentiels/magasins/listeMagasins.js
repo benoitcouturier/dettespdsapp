@@ -3,7 +3,7 @@ $(document).ready(function(){
 	console.log($( "#btnRecherche"));
 })
 
-$( "#btnRecherche")[0].click(function() {
+$( "#btnRecherche")[0].on('click',function() {
 	console.log('yes');
   $( "#divRecherche" ).toggle( "slow" );
 });

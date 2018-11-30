@@ -11,15 +11,15 @@ body{
 	background-color : #eee !important;
 }
 
-.caroussel-caption {
+.carousel-caption {
 	top : 590px !important;
 	bottom : unset;
 }
 
-.caroussel-indicator {
+.carousel-indicator {
 	bottom : 50px !important;
 }
 
-.caroussel-inner {
+.carousel-inner {
 	height : 700px;
 }

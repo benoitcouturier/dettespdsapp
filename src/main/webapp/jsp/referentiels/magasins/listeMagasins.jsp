@@ -9,7 +9,7 @@
 
 <body>
 
-	<div class="conteneur">
+	<div class="conteneur marginNavBar">
 
 		<div class="row">
 

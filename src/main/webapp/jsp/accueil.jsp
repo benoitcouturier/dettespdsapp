@@ -94,7 +94,7 @@
 					<ul class="pages">
 						<li><a href="#">Voyages</a></li>
 						<li><a href="#">Nature</a></li>
-						<li><a href="#">Nouveautés</a></li>
+						<li><a href="#">Nouveautes</a></li>
 						<li><a href="#">Sciences</a></li>
 						<li><a href="#">Avis</a></li>
 					</ul>
@@ -117,8 +117,10 @@
 				</ul>
 			</div>
 			<div class="col-md-3 footer-ns animated fadeInRight">
-				<h4>Newsletter</h4>
-				<p>A rover wearing a fuzzy suit doesn't alarm the real penguins</p>
+				<h4>Auteurs</h4>
+				<p>WODLING Terence</p>
+				<p>GIANG Thomas</p>
+				<p>Suite...</p>
 			</div>
 		</div>
 	</footer>

@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 
-$("#btnRecherche").click(function() {
+$("#btnRecherche").onclick(function() {
 	console.log('yes');
 	$( "#divRecherche" ).toggle( "slow" );
 });

@@ -43,7 +43,10 @@ public class GetMagasinApi {
 			
 			ObjectMapper mapper = new ObjectMapper();
 			Magasin[] p = mapper.readValue(resp, Magasin[].class);
-			System.out.println(p.length);
+			if (p != null) {
+				System.out.println(p.length);
+			}
+			
 			
 			httpClient.getConnectionManager().shutdown();
 

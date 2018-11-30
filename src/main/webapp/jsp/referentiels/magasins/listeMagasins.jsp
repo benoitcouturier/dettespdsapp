@@ -22,7 +22,7 @@
 
 						<div class="col-lg-12">
 
-							<button id="btnRecherche" class="btn btn-success">Recherche</button>
+							<button id="btnRecherche" class="btn btn-success" onclick="toggleRecherche()">Recherche</button>
 							<div id="divRecherche">
 								<p>Affichage Recherche</p>
 							</div>

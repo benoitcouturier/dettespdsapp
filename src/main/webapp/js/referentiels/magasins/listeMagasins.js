@@ -4,8 +4,9 @@ $(document).ready(function(){
 });
 
 
-$("#btnRecherche").onclick(function() {
+function toggleRecherche() {
 	console.log('yes');
 	$( "#divRecherche" ).toggle( "slow" );
-});
+}
+
 

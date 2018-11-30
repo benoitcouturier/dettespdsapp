@@ -5,6 +5,7 @@
 <html>
 <%@ include file="/html/common/header.html" %>
 <%@ include file="/jsp/common/nav.jsp" %>
+
 <body>
 	<h1>
 		<bean:write name="TestStrutsActionForm" property="message" />
@@ -58,4 +59,5 @@
 	</tbody>
 	</table>
 </body>
+
 </html>

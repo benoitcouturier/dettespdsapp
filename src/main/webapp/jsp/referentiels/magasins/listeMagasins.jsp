@@ -5,6 +5,8 @@
 <html>
 <%@ include file="/html/accueilLink_js_css.html"%>
 <%@ include file="/html/common/header.html"%>
+<%@ include file="/jsp/common/nav.jsp"%>
+
 
 <body>
 

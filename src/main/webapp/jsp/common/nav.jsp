@@ -6,8 +6,8 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">X-MALL</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+    <ul id="listeLienNav" class="nav navbar-nav">
+      <li><a href="Accueil.do">Home</a></li>
       <li><a href="Magasin.do">Magasins</a></li>
       <li><a href="#">Produits</a></li>
       <li><a href="#">Parcours</a></li>

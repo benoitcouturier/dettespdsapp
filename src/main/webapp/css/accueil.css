@@ -19,3 +19,7 @@ body{
 .caroussel-indicator {
 	bottom : 50px !important;
 }
+
+.caroussel-inner {
+	height : 700px;
+}

@@ -122,7 +122,7 @@
 			</div>
 			<div class="col-md-3 footer-ns animated fadeInRight">
 				<h4>Newsletter</h4>
-				<p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+				<p>A rover wearing a fuzzy suit doesn't alarm the real penguins</p>
 				<p>
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search for...">

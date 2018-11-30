@@ -1,10 +1,10 @@
 <%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
 <%@taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html>
-<head>
-<title>Hello World</title>
-</head>
+<%@ include file="/html/common/header.html" %>
+<%@ include file="/jsp/common/nav.jsp" %>
 <body>
 	<h1>
 		<bean:write name="TestStrutsActionForm" property="message" />

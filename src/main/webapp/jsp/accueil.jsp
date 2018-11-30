@@ -34,8 +34,8 @@
 								src="https://image.tmdb.org/t/p/w1280/9GJgBfqeK0D7lQWeCLPJz1QLmBF.jpg"
 								style="width: 100%" class="img-responsive" alt="Image">
 							<div class="carousel-caption">
-								<h3>Noël</h3>
-								<p>Prenez vous en Photo avec le père Noël</p>
+								<h3>NoÃ«l</h3>
+								<p>Prenez vous en Photo avec le pÃ¨re NoÃ«l</p>
 							</div>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 					<a class="left carousel-control" href="#myCarousel" role="button"
 						data-slide="prev"> <span
 						class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Précédent</span>
+						<span class="sr-only">PrÃ©cÃ©dent</span>
 					</a> <a class="right carousel-control" href="#myCarousel" role="button"
 						data-slide="next"> <span
 						class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
@@ -59,7 +59,7 @@
 						<div class="col-sm-4">
 							<img src="/X-MALL-APP/image/accueil/histoire-d-or-310.jpeg"
 								class="img-responsive" style="width: 100%" alt="Image">
-							<p>150 Magasins différents</p>
+							<p>150 Magasins diffÃ©rents</p>
 						</div>
 						<div class="col-sm-4">
 							<img src="/X-MALL-APP/image/accueil/magasin-bio-natureo-06.jpg"
@@ -80,11 +80,62 @@
 			</div>
 		</div>
 	</div>
-	<footer class="container-fluid text-center">
-		<p>Footer Text</p>
+
+	<footer class="footer-bs">
+		<div class="row">
+			<div class="col-md-3 footer-brand animated fadeInLeft">
+				<h2>Logo</h2>
+				<p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam
+					porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget
+					faucibus faucibus, purus erat eleifend enim, porta pellentesque ex
+					mi ut sem.</p>
+				<p>Â© 2014 BS3 UI Kit, All rights reserved</p>
+			</div>
+			<div class="col-md-4 footer-nav animated fadeInUp">
+				<h4>Menu â€”</h4>
+				<div class="col-md-6">
+					<ul class="pages">
+						<li><a href="#">Travel</a></li>
+						<li><a href="#">Nature</a></li>
+						<li><a href="#">Explores</a></li>
+						<li><a href="#">Science</a></li>
+						<li><a href="#">Advice</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<ul class="list">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contacts</a></li>
+						<li><a href="#">Terms and Condition</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2 footer-social animated fadeInDown">
+				<h4>Follow Us</h4>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Instagram</a></li>
+					<li><a href="#">RSS</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer-ns animated fadeInRight">
+				<h4>Newsletter</h4>
+				<p>A rover wearing a fuzzy suit doesnâ€™t alarm the real penguins</p>
+				<p>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for...">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<span class="glyphicon glyphicon-envelope"></span>
+						</button>
+					</span>
+				</div>
+				</p>
+			</div>
+		</div>
 	</footer>
-
-
 </body>
 
 </html>

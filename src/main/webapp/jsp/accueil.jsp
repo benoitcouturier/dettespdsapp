@@ -35,7 +35,7 @@
 								style="width: 100%" class="img-responsive" alt="Image">
 							<div class="carousel-caption">
 								<h3>Noel</h3>
-								<p>Prenez vous en Photo avec le père Noël</p>
+								<p>Prenez vous en Photo avec le pere Noel</p>
 							</div>
 						</div>
 					</div>
@@ -84,30 +84,27 @@
 	<footer class="footer-bs">
 		<div class="row">
 			<div class="col-md-3 footer-brand animated fadeInLeft">
-				<h2>Logo</h2>
-				<p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam
-					porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget
-					faucibus faucibus, purus erat eleifend enim, porta pellentesque ex
-					mi ut sem.</p>
-				<p>© 2014 BS3 UI Kit, All rights reserved</p>
+				<h2>X-MALL</h2>
+				<p>Le futur du commerce sur place et en ligne</p>
+				<p>X-MALL 2018, All rights reserved</p>
 			</div>
 			<div class="col-md-4 footer-nav animated fadeInUp">
-				<h4>Menu —</h4>
+				<h4>Menu </h4>
 				<div class="col-md-6">
 					<ul class="pages">
-						<li><a href="#">Travel</a></li>
+						<li><a href="#">Voyages</a></li>
 						<li><a href="#">Nature</a></li>
-						<li><a href="#">Explores</a></li>
-						<li><a href="#">Science</a></li>
-						<li><a href="#">Advice</a></li>
+						<li><a href="#">Nouveautés</a></li>
+						<li><a href="#">Sciences</a></li>
+						<li><a href="#">Avis</a></li>
 					</ul>
 				</div>
 				<div class="col-md-6">
 					<ul class="list">
-						<li><a href="#">About Us</a></li>
+						<li><a href="#">A propos de nous</a></li>
 						<li><a href="#">Contacts</a></li>
-						<li><a href="#">Terms and Condition</a></li>
-						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Termes et Conditions</a></li>
+						<li><a href="#">Vie privee</a></li>
 					</ul>
 				</div>
 			</div>
@@ -117,22 +114,11 @@
 					<li><a href="#">Facebook</a></li>
 					<li><a href="#">Twitter</a></li>
 					<li><a href="#">Instagram</a></li>
-					<li><a href="#">RSS</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3 footer-ns animated fadeInRight">
 				<h4>Newsletter</h4>
 				<p>A rover wearing a fuzzy suit doesn't alarm the real penguins</p>
-				<p>
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search for...">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">
-							<span class="glyphicon glyphicon-envelope"></span>
-						</button>
-					</span>
-				</div>
-				</p>
 			</div>
 		</div>
 	</footer>

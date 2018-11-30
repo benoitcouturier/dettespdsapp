@@ -3,12 +3,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
+<%@ include file="/html/accueilLink_js_css.html"%>
 <%@ include file="/html/common/header.html"%>
 <%@ include file="/jsp/common/nav.jsp"%>
 
 <body>
 
-	<div class="container">
+	<div class="container marginNavBar">
 
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->

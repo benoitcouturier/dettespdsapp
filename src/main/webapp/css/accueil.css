@@ -4,9 +4,18 @@
 
 .conteneur{
 	margin-left : 5px;
-	margin-right : 5 px;
+	margin-right : 5px;
 }
 
 body{
-	background-color : #eee;
+	background-color : #eee !important;
+}
+
+.caroussel-caption {
+	top : 590px !important;
+	bottom : unset;
+}
+
+.caroussel-indicator {
+	bottom : 50px !important;
 }

@@ -80,7 +80,7 @@ function envoiFormulaireMagasin(){
 	console.log(numType);
 	console.log(description);
 	
-	if(nom != null){
+	if(nom != "" && nom != " "){
 		
 	}else{
 		alert('Entrer un nom de magasin.');

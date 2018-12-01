@@ -25,10 +25,14 @@ function modalAjout() {
 		crossDomain : true,
 		success : function(msg) {
 			console.log(msg);
-			for(var i=0 ; i< msg.length-1 ; i++){
-				var opt = new Option();
-				opt.value=msg[i].id;
-				opt.innerHTML=msg[i].id;
+			
+			if(selectEmplacement.options.length != msg.length){
+				selectEmplacement.options = null;
+				for(var i=0 ; i< msg.length-1 ; i++){
+					var opt = new Option();
+					opt.value=msg[i].id;
+					opt.innerHTML=msg[i].id;
+				}	
 			}
 		}
 	});

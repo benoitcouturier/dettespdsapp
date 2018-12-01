@@ -11,6 +11,8 @@ function toggleRecherche() {
 
 function modalAjout() {
 	console.log('Ajout Modal');
+	
+	// recupération tous les emplacements disponibles
 	$.ajax({
 		headers: { 
 	        'Accept': 'application/json',
@@ -18,6 +20,21 @@ function modalAjout() {
 	    },
 		dataType : "json",
 		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
+		type : 'GET',
+		crossDomain : true,
+		success : function(msg) {
+			console.log(msg);
+		}
+	});
+	
+	// recupération tous les types de magasins
+	$.ajax({
+		headers: { 
+	        'Accept': 'application/json',
+	        'Content-Type': 'application/json'
+	    },
+		dataType : "json",
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/TypeMagasin/tous',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {

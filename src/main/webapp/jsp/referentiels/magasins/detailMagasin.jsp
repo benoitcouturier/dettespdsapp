@@ -9,7 +9,7 @@
 	file="/html/referentiels/magasins/detailMagasinLink_js_css.html"%>
 
 <body>
-	<div class="container marginNavBar">
+	<div id="page" class="container marginNavBar">
 
 		<div class="row">
 
@@ -36,7 +36,8 @@
 		<div class="row">
 
 			<div class="col-lg-12">
-				<button class="btn btn-danger">Supprimer</button>
+				<button class="btn btn-danger" data-toggle="modal"
+					data-target="#myModal">Supprimer</button>
 				<button class="btn btn-primary">Modifier</button>
 			</div>
 
@@ -53,8 +54,8 @@
 						<h4 class="modal-title">Supprimer le Magasin ${mag.nom}</h4>
 					</div>
 					<div class="modal-footer">
-					<button type="button" class="btn btn-danger" id="suppModal"
-							data-dismiss="modal">Supprimer</button>
+						<button type="button" class="btn btn-danger" id="suppModal"
+							onclick="supprimerMagasin(${mag.id})" data-dismiss="modal">Supprimer</button>
 						<button type="button" class="btn btn-default" id="closeModal"
 							data-dismiss="modal">Close</button>
 					</div>
@@ -62,6 +63,8 @@
 
 			</div>
 		</div>
+		
+		
 	</div>
 </body>
 

@@ -27,9 +27,17 @@
         <action name="TestStrutsActionForm" path="/Form" scope="session" type="servlets.FormulaireAction">
             <forward name="success" path="/jsp/test.jsp" />
         </action>
+        
+        
+        <!-- MAGASINS -->
         <action name="MagasinActionForm" path="/Magasin" scope="session" type="servlets.referentiels.magasins.MagasinAction">
             <forward name="success" path="/jsp/referentiels/magasins/listeMagasins.jsp" />
         </action>
+        <action name="DetailMagasinActionForm" path="/DetailMagasin" scope="session" type="servlets.referentiels.magasins.DetailMagasinAction">
+            <forward name="success" path="/jsp/referentiels/magasins/detailMagasin.jsp" />
+        </action>
+        
+        
         <action name="Formulaire" path="/FormTarifs" scope="session" type="servlets.referentiels.tarifsLivraison.FormulaireAction">
             <forward name="success" path="/jsp/test.jsp" />
         </action>

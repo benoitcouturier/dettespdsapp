@@ -33,5 +33,7 @@ function supprimerMagasin(e){
 }
 
 function viderPage(){
-	
+	var page = $('#page')[0];
+	page.innerHTML = ' ';
+	page.innerHTML = '<a href="Acceuil.do">Revenir à l\'accueil</a>'
 }

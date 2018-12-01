@@ -83,7 +83,7 @@
 										<div class="modal-footer">
 											<button type="button" class="btn btn-primary"
 												onclick="envoiFormulaireMagasin()">Ajouter</button>
-											<button type="button" class="btn btn-default"
+											<button type="button" class="btn btn-default" id="closeModal"
 												data-dismiss="modal">Close</button>
 										</div>
 									</div>
@@ -96,7 +96,7 @@
 					</div>
 					<br>
 					<!--  Liste de magasins  -->
-					<div class="row">
+					<div class="row" id="listeMagasins">
 						<c:forEach var="iterator" items="${mag}">
 							<div class="col-sm-4">
 								<div class="panel panel-primary">

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$('#listeLienNav')[0].children[1].setAttribute('class','active');
 	console.log($("#btnRecherche"));
+	$( "#divRecherche" ).toggle( "slow" );
 });
 
 
@@ -86,7 +87,7 @@ function envoiFormulaireMagasin(){
 		obj.idEmplacement = numEmplacement;
 		obj.idType = numType;
 		obj.description = description;
-		$.ajax({
+		/*$.ajax({
 			// Type data
 			headers: { 
 				'Accept': 'application/json',
@@ -107,9 +108,18 @@ function envoiFormulaireMagasin(){
 			success: function (msg) {  
 				console.log(msg);  
 			}
-		});
+		});*/
+		$("#closeModal").trigger("click");
+		rechargerListe();
 	}else{
 		alert('Entrer un nom de magasin.');
 	}
-
+	
 }
+
+
+function rechargerListe(){
+	var listeMagasins = $('#listeMagasins')[0];
+	console.log(listeMagasins);
+}
+

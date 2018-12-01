@@ -70,14 +70,20 @@ function modalAjout() {
 function envoiFormulaireMagasin(){
 	console.log('Envoi du formulaire');
 	
-	var nom = $('#nameMagasin')[0];
-	var numEmplacement = $('#numEmplacement')[0];
-	var numType= $('#numType')[0];
-	var description = $('description')[0];
+	var nom = $('#nameMagasin')[0].value;
+	var numEmplacement = $('#numEmplacement')[0].value;
+	var numType= $('#numType')[0].value;
+	var description = $('#description')[0].value;
 	
-	console.log(nom.value);
-	console.log(numEmplacement.value);
-	console.log(numType.value);
-	console.log(description.value);
+	console.log(nom);
+	console.log(numEmplacement);
+	console.log(numType);
+	console.log(description);
+	
+	if(nom != null){
+		
+	}else{
+		alert('Entrer un nom de magasin.');
+	}
 	
 }

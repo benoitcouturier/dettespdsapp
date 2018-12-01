@@ -45,7 +45,15 @@
 											<h4 class="modal-title">Ajouter Magasin</h4>
 										</div>
 										<div class="modal-body">
-											<p>Formulaire d'ajout</p>
+											<label for="nameMagasin">Nom du Magasin</label>
+											<input type="text" name="nameMagasin" id="nameMagasin"/>
+											<label for="numEmplacement">Emplacement</label>
+											<select name="numEmplacement" id="numEmplacement"></select>
+											<label for="numType">Type de Magasin</label>
+											<select name="numType" id="numType"></select>
+											<label for="description">Description</label>
+											<textarea name="description" id="description" maxlength="250"></textarea>
+											
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-primary"

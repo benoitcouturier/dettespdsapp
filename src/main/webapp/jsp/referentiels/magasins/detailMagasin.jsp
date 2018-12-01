@@ -9,7 +9,7 @@
 	file="/html/referentiels/magasins/detailMagasinLink_js_css.html"%>
 
 <body>
-	<div class="container marginNavSupp marginNavBar">
+	<div class="container marginNavBar">
 
 		<div class="row">
 

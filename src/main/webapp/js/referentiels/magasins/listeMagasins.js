@@ -13,6 +13,12 @@ function toggleRecherche() {
 function modalAjout() {
 	console.log('Ajout Modal');
 	// select emplacement
+	
+	var nom = $('#nameMagasin')[0];
+	var description = $('#description')[0];
+	nom.value='';
+	description.value='';
+	
 	var selectEmplacement = $('#numEmplacement')[0];
 
 	// recupération tous les emplacements disponibles

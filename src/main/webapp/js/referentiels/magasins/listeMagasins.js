@@ -32,7 +32,7 @@ function modalAjout() {
 					var opt = new Option();
 					opt.value=msg[i].id;
 					opt.innerHTML=msg[i].id;
-					selectEmplacement.options.push(opt);
+					selectEmplacement.appendChild(opt);
 				}	
 			}
 		}

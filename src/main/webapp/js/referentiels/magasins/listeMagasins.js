@@ -17,16 +17,16 @@ function modalAjout() {
 	// recupération tous les emplacements disponibles
 	$.ajax({
 		headers: { 
-	        'Accept': 'application/json',
-	        'Content-Type': 'application/json'
-	    },
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
 		dataType : "json",
 		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
 			console.log(msg);
-			
+
 			if(selectEmplacement.options.length != msg.length){
 				selectEmplacement.options.length=0;
 				for(var i=0 ; i< msg.length-1 ; i++){
@@ -38,22 +38,22 @@ function modalAjout() {
 			}
 		}
 	});
-	
+
 	// recupération tous les types de magasins
 	var selectType = $('#numType')[0];
-	
+
 	$.ajax({
 		headers: { 
-	        'Accept': 'application/json',
-	        'Content-Type': 'application/json'
-	    },
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
 		dataType : "json",
 		url : 'http://192.168.20.3:8080/ApiRest/RestGT/TypeMagasin/tous',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
 			console.log(msg);
-			
+
 			if(selectType.options.length != msg.length){
 				selectType.options.length=0;
 				for(var i=0 ; i< msg.length-1 ; i++){
@@ -69,21 +69,47 @@ function modalAjout() {
 
 function envoiFormulaireMagasin(){
 	console.log('Envoi du formulaire');
-	
+
 	var nom = $('#nameMagasin')[0].value;
 	var numEmplacement = $('#numEmplacement')[0].value;
 	var numType= $('#numType')[0].value;
 	var description = $('#description')[0].value;
-	
+
 	console.log(nom);
 	console.log(numEmplacement);
 	console.log(numType);
 	console.log(description);
-	
+
 	if(nom != "" && nom != " "){
-		
+		var obj = new Object();
+		obj.nom = nom;
+		obj.idEmplacement = numEmplacement;
+		obj.idType = numType;
+		obj.description = description;
+		$.ajax({
+			// Type data
+			headers: { 
+				'Accept': 'application/json',
+				'Content-Type': 'application/json' 
+			},
+			dataType : 'json',
+
+			// url API
+			url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/create',
+
+			// Type method : POST PUT GET
+			type: 'POST',  
+
+			// parse Object to JSON 
+			data: JSON.stringify(obj), 
+
+			// MSG IF success
+			success: function (msg) {  
+				console.log(msg);  
+			}
+		});
 	}else{
 		alert('Entrer un nom de magasin.');
 	}
-	
+
 }

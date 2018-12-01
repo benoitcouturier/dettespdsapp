@@ -1,5 +1,7 @@
 package servlets.referentiels.magasins;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -26,7 +28,6 @@ public class MagasinAction extends org.apache.struts.action.Action{
         
         GetMagasinApi objet = new GetMagasinApi();
         Magasin[] mag = objet.get();
-        
         request.setAttribute("mag", mag);
         
         return mapping.findForward(SUCCESS);

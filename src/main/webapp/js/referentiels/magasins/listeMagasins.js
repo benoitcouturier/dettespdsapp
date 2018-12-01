@@ -68,5 +68,16 @@ function modalAjout() {
 }
 
 function envoiFormulaireMagasin(){
-	console.log('Envoi du formulaire')
+	console.log('Envoi du formulaire');
+	
+	var nom = $('#nameMagasin')[0];
+	var numEmplacement = $('#numEmplacement')[0];
+	var numType= $('#numType')[0];
+	var description = $('description')[0];
+	
+	console.log(nom.value);
+	console.log(numEmplacement.value);
+	console.log(numType.value);
+	console.log(description.value);
+	
 }

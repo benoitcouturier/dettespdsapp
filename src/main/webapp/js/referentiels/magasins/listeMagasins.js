@@ -11,7 +11,8 @@ function toggleRecherche() {
 
 function modalAjout() {
 	console.log('Ajout Modal');
-	
+	var selectEmplacement = $('#numEmplacement')[0];
+	console.log(selectEmplacement);
 	// recupération tous les emplacements disponibles
 	$.ajax({
 		headers: { 
@@ -26,7 +27,6 @@ function modalAjout() {
 			console.log(msg);
 			for(var i=0 ; i< msg.length-1 ; i++){
 				var opt = new Option();
-				console.log(opt);
 				opt.value=msg[i].id;
 				opt.innerHTML=msg[i].id;
 			}

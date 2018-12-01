@@ -67,7 +67,7 @@
 						</div>
 						<div class="col-sm-4">
 							<div class="well">
-								<p>Voir les magasins</p>
+								<p><a class="lienColor" href="Magasin.do">Voir les magasins </a></p>
 							</div>
 							<div class="well">
 								<p>Rechercher un article</p>

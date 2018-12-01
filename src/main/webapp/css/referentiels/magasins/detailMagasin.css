@@ -1,0 +1,24 @@
+.marginNavBar{
+	margin-top:50px;
+}
+
+.marginNavSupp{
+	margin-top:10px;
+}
+
+.conteneur{
+	margin-left : 15px;
+	margin-right : 15px;
+}
+
+body{
+	background-color : #eee !important;
+}
+
+.lienColor{
+	color: white;
+}
+
+.lienColor:hover{
+	color: rgb(200,200,200);
+}

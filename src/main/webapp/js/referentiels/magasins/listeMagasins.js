@@ -87,7 +87,7 @@ function envoiFormulaireMagasin(){
 		obj.idEmplacement = numEmplacement;
 		obj.idType = numType;
 		obj.description = description;
-		/*$.ajax({
+		$.ajax({
 			// Type data
 			headers: { 
 				'Accept': 'application/json',
@@ -109,11 +109,11 @@ function envoiFormulaireMagasin(){
 				console.log(msg);  
 				rechargerListe();
 			}
-		});*/
+		});
 		$("#closeModal").trigger("click");
 		var listeMagasins = $('#listeMagasins')[0];
 		listeMagasins.innerHTML= '<div class="loader"></div>';
-		rechargerListe();// aeffacer
+		//rechargerListe();// aeffacer
 
 	}else{
 		alert('Entrer un nom de magasin.');

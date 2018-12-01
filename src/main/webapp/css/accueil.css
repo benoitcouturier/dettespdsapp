@@ -24,6 +24,14 @@ body{
 	height : 700px;
 }
 
+.lienColor{
+	color: white;
+}
+
+.lienColor:hover{
+	color: rgb(200,200,200);
+}
+
 /* FOOTER */
 
 .footer-bs {

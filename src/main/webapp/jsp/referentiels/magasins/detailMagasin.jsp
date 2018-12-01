@@ -13,7 +13,7 @@
 
 		<div class="row">
 
-			<div class="col-lg-12">${mag.nom}</div>
+			<div class="col-lg-12"><h3>${mag.nom}</h3></div>
 
 		</div>
 

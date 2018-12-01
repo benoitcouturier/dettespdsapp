@@ -107,10 +107,12 @@ function envoiFormulaireMagasin(){
 			// MSG IF success
 			success: function (msg) {  
 				console.log(msg);  
+				rechargerListe();
 			}
 		});*/
 		$("#closeModal").trigger("click");
-		rechargerListe();
+		var listeMagasins = $('#listeMagasins')[0];
+		listeMagasins.innerHTML= '<div class="loader"></div>';
 	}else{
 		alert('Entrer un nom de magasin.');
 	}
@@ -120,7 +122,6 @@ function envoiFormulaireMagasin(){
 
 function rechargerListe(){
 	var listeMagasins = $('#listeMagasins')[0];
-	listeMagasins.innerHTML= '<div class="loader"></div>';
 	$.ajax({
 		headers: { 
 			'Accept': 'application/json',
@@ -133,6 +134,19 @@ function rechargerListe(){
 		success : function(msg) {
 			console.log(msg);
 			listeMagasins.innerHTML= '';
+			for(var i=0; i< msg.length-1 ; i++){
+				var divMag = 
+			'<div class="col-sm-4">'+
+			'	<div class="panel panel-primary">'+
+			'		<div class="panel-heading">'+ msg[i].nom +'</div>'+
+			'		<div class="panel-body">'+
+			'			<img src="https://placehold.it/150x80?text=IMAGE"'+
+			'			class="img-responsive" style="width: 100%" alt="Image">'+
+			'		</div>'+
+			'		<div class="panel-footer">Ouvert 7j/7 en période de Noel.</div>'+
+			'	</div>'+
+			'</div>'
+			}
 		}
 	});
 	

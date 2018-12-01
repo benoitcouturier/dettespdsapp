@@ -13,7 +13,34 @@
 
 		<div class="row">
 
-			<div class="col-lg-12"><h3>${mag.nom}</h3></div>
+			<div class="col-lg-12">
+			<h3>${mag.nom}</h3>
+			<p>
+			Type de magasin : <span id="typeMagasin"></span>
+			</p>
+			<span class="hiddenData" id="idType"></span>
+			<span class="hiddenData" id="idEmplacement"></span>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-12">
+			<h3>Description</h3>
+			<p>
+			${mag.description}
+			</p>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-12">
+				<button class="btn btn-danger">Supprimer</button>
+				<button class="btn btn-primary">Modifier</button>
+			</div>
 
 		</div>
 

@@ -13,7 +13,7 @@ function modalAjout() {
 	console.log('Ajout Modal');
 	$.ajax({
 		dataType : "json",
-		url : 'http://localhost/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
+		url : 'http://localhost:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {

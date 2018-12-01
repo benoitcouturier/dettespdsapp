@@ -18,7 +18,7 @@ function modalAjout() {
 	        'Access-Control-Allow-Origin ': 'http://localhost:8080/'
 	    },
 		dataType : "json",
-		url : 'http://localhost:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {

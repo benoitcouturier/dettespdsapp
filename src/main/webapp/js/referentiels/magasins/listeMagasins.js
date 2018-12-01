@@ -14,8 +14,7 @@ function modalAjout() {
 	$.ajax({
 		headers: { 
 	        'Accept': 'application/json',
-	        'Content-Type': 'application/json',
-	        'Access-Control-Allow-Origin ': 'http://localhost:8080/'
+	        'Content-Type': 'application/json'
 	    },
 		dataType : "json",
 		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',

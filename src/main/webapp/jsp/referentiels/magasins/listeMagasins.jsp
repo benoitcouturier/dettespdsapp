@@ -61,7 +61,7 @@
 															id="numEmplacement"></select>
 													</div>
 												</div>
-
+												<br>
 												<div class="col-lg-6">
 													<div>
 														<label for="numType">Type de Magasin : </label> <select

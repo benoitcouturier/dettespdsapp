@@ -13,7 +13,7 @@ function modalAjout() {
 	console.log('Ajout Modal');
 	// select emplacement
 	var selectEmplacement = $('#numEmplacement')[0];
-	console.log(selectEmplacement);
+
 	// recupération tous les emplacements disponibles
 	$.ajax({
 		headers: { 
@@ -40,6 +40,8 @@ function modalAjout() {
 	});
 	
 	// recupération tous les types de magasins
+	var selectType = $('#numType')[0];
+	
 	$.ajax({
 		headers: { 
 	        'Accept': 'application/json',
@@ -51,6 +53,16 @@ function modalAjout() {
 		crossDomain : true,
 		success : function(msg) {
 			console.log(msg);
+			
+			if(selectType.options.length != msg.length){
+				selectType.options.length=0;
+				for(var i=0 ; i< msg.length-1 ; i++){
+					var opt = new Option();
+					opt.value=msg[i].id;
+					opt.innerHTML=msg[i].id + "-" + msg[i].type;
+					selectType.appendChild(opt);
+				}	
+			}
 		}
 	});
 }

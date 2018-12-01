@@ -97,7 +97,7 @@
 
 					<!--  Liste de magasins  -->
 					<div class="row">
-						<c:forEach var="iterator" begin="0" end="${mag.size()-1}">
+						<c:forEach var="iterator" begin="0" end="${mag.length - 1}">
 							<div class="col-sm-4">
 								<div class="panel panel-primary">
 									<div class="panel-heading">Magasin Nom</div>

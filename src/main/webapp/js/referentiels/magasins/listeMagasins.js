@@ -140,7 +140,7 @@ function rechargerListe(){
 				var divMag = 
 					'<div class="col-sm-4">'+
 					'	<div class="panel panel-primary">'+
-					'		<div class="panel-heading"><a href="DetailMagasin.do?mag='+msg[i].id+'">'+ msg[i].nom +'</a></div>'+
+					'		<div class="panel-heading"><a class="lienColor" href="DetailMagasin.do?mag='+msg[i].id+'">'+ msg[i].nom +'</a></div>'+
 					'		<div class="panel-body">'+
 					'			<img src="https://placehold.it/150x80?text=IMAGE"'+
 					'			class="img-responsive" style="width: 100%" alt="Image">'+

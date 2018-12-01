@@ -21,7 +21,7 @@ $(document).ready(function(){
 			console.log(msg);
 
 			if(rechercheType.options.length != msg.length){
-				rechercheType.options.length=0;
+				
 				for(var i=0 ; i< msg.length ; i++){
 					var opt = new Option();
 					opt.value=msg[i].id;

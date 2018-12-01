@@ -104,7 +104,7 @@
 										<img src="https://placehold.it/150x80?text=IMAGE"
 											class="img-responsive" style="width: 100%" alt="Image">
 									</div>
-									<div class="panel-footer">Ouvert 7j/7 en période de Noel.</div>
+									<div class="panel-footer">Ouvert 7j/7 en periode de Noel.</div>
 								</div>
 							</div>
 						</c:forEach>

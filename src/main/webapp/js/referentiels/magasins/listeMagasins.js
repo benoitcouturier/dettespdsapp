@@ -30,7 +30,7 @@ function modalAjout() {
 
 			if(selectEmplacement.options.length != msg.length){
 				selectEmplacement.options.length=0;
-				for(var i=0 ; i< msg.length-1 ; i++){
+				for(var i=0 ; i< msg.length ; i++){
 					var opt = new Option();
 					opt.value=msg[i].id;
 					opt.innerHTML=msg[i].id + "-" + msg[i].aile;
@@ -57,7 +57,7 @@ function modalAjout() {
 
 			if(selectType.options.length != msg.length){
 				selectType.options.length=0;
-				for(var i=0 ; i< msg.length-1 ; i++){
+				for(var i=0 ; i< msg.length ; i++){
 					var opt = new Option();
 					opt.value=msg[i].id;
 					opt.innerHTML=msg[i].id + "-" + msg[i].type;
@@ -136,7 +136,7 @@ function rechargerListe(){
 		success : function(msg) {
 			console.log(msg);
 			listeMagasins.innerHTML= '';
-			for(var i=0; i< msg.length-1 ; i++){
+			for(var i=0; i< msg.length ; i++){
 				var divMag = 
 					'<div class="col-sm-4">'+
 					'	<div class="panel panel-primary">'+
@@ -145,11 +145,11 @@ function rechargerListe(){
 					'			<img src="https://placehold.it/150x80?text=IMAGE"'+
 					'			class="img-responsive" style="width: 100%" alt="Image">'+
 					'		</div>'+
-					'		<div class="panel-footer">Ouvert 7j/7 en période de Noel.</div>'+
+					'		<div class="panel-footer">Ouvert 7j/7 en periode de Noel.</div>'+
 					'	</div>'+
 					'</div>';
 				console.log(divMag);
-				listeMagasins.append(divMag);
+				listeMagasins.innerHTML+=divMag;
 			}
 		}
 	});

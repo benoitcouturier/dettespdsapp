@@ -36,16 +36,12 @@
 
 										<label for="rechercheType">Type de magasin : </label> 
 										<select	class="form-control" id="rechercheType"
-											name="rechercheType"></select>
+											name="rechercheType" onchange="rechercheType()"></select>
 										
 									</div>
 
 								</div>
 								<div class="row">
-
-									<div class="col-lg-12">
-										<button class="btn btn-success" onclick="rechercheType()">Rechercher</button>
-									</div>
 
 								</div>
 								

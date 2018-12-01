@@ -11,6 +11,15 @@ function toggleRecherche() {
 
 function modalAjout() {
 	console.log('Ajout Modal');
+	$.ajax({
+		dataType : "json",
+		url : 'http://localhost/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
+		type : 'GET',
+		crossDomain : true,
+		success : function(msg) {
+			console.log(msg);
+		}
+	});
 }
 
 function envoiFormulaireMagasin(){

@@ -35,5 +35,6 @@ function supprimerMagasin(e){
 function viderPage(){
 	var page = $('#page')[0];
 	page.innerHTML = ' ';
-	page.innerHTML = '<a class="marginNavSupp" href="Accueil.do">Revenir a l\'accueil</a>'
+	page.style = "margin-top : 60px;"
+	page.innerHTML = '<a class="" href="Accueil.do">Revenir a l\'accueil</a>'
 }

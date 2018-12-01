@@ -4,9 +4,9 @@ $(document).ready(function(){
 	$( "#divRecherche" ).toggle( "slow" );
 	var rechercheType = $('#rechercheType')[0];
 	var optChoose = new Option();
-	opt.value=0;
-	opt.innerHTML='Choisir un type ...';
-	rechercheType.appendChild(opt);
+	optChoose.value=0;
+	optChoose.innerHTML='Choisir un type ...';
+	rechercheType.appendChild(optChoose);
 	
 	$.ajax({
 		headers: { 

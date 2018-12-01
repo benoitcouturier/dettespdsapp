@@ -38,7 +38,7 @@
 			<div class="col-lg-12">
 				<button class="btn btn-danger" data-toggle="modal"
 					data-target="#myModal">Supprimer</button>
-				<button class="btn btn-primary">Modifier</button>
+				<!-- <button class="btn btn-primary">Modifier</button> -->
 			</div>
 
 		</div>

@@ -56,7 +56,7 @@
 													</div>
 													<br>
 													<div>
-														<label for="numEmplacement">Emplacement : </label> <select
+														<label for="numEmplacement">Emplacement disponibles : </label> <select
 															class="form-control" name="numEmplacement"
 															id="numEmplacement"></select>
 													</div>

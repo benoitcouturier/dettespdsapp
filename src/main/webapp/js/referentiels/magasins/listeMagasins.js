@@ -31,7 +31,7 @@ function modalAjout() {
 				for(var i=0 ; i< msg.length-1 ; i++){
 					var opt = new Option();
 					opt.value=msg[i].id;
-					opt.innerHTML=msg[i].id;
+					opt.innerHTML=msg[i].id + "-" + msg[i].aile;
 					selectEmplacement.appendChild(opt);
 				}	
 			}

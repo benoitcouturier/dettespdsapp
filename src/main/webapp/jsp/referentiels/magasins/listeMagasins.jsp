@@ -56,9 +56,9 @@
 													</div>
 													<br>
 													<div>
-														<label for="numEmplacement">Emplacement disponibles : </label> <select
-															class="form-control" name="numEmplacement"
-															id="numEmplacement"></select>
+														<label for="numEmplacement">Emplacement
+															disponibles : </label> <select class="form-control"
+															name="numEmplacement" id="numEmplacement"></select>
 													</div>
 												</div>
 												<br>
@@ -97,18 +97,18 @@
 
 					<!--  Liste de magasins  -->
 					<div class="row">
-						<%-- <c:forEach var="iterator" begin="0" end="mag.size()-1"> --%>
-						<div class="col-sm-4">
-							<div class="panel panel-primary">
-								<div class="panel-heading">Magasin Nom</div>
-								<div class="panel-body">
-									<img src="https://placehold.it/150x80?text=IMAGE"
-										class="img-responsive" style="width: 100%" alt="Image">
+						<c:forEach var="iterator" begin="0" end="${mag.size()-1}">
+							<div class="col-sm-4">
+								<div class="panel panel-primary">
+									<div class="panel-heading">Magasin Nom</div>
+									<div class="panel-body">
+										<img src="https://placehold.it/150x80?text=IMAGE"
+											class="img-responsive" style="width: 100%" alt="Image">
+									</div>
+									<div class="panel-footer">Emplacement :</div>
 								</div>
-								<div class="panel-footer">Emplacement :</div>
 							</div>
-						</div>
-						<%-- </c:forEach> --%>
+						</c:forEach>
 					</div>
 
 

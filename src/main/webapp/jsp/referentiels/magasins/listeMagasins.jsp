@@ -23,16 +23,34 @@
 
 						<div class="col-lg-12">
 
-							<button id="btnRecherche" class="btn btn-success"
+							<button id="btnRecherche" class="btn btn-primary"
 								onclick="toggleRecherche()">Recherche</button>
-							<button id="ajouterMagasin" class="btn btn-success"
+							<button id="ajouterMagasin" class="btn btn-primary"
 								data-toggle="modal" data-target="#myModal"
 								onclick="modalAjout()">Ajouter un magasin</button>
 
 							<div id="divRecherche">
-								<p>Affichage Recherche</p>
+								<div class="row">
+
+									<div class="col-lg-6">
+
+										<label for="rechercheType">Type de magasin : </label> 
+										<select	class="form-control" id="rechercheType"
+											name="rechercheType"></select>
+										
+									</div>
+
+								</div>
+								<div class="row">
+
+									<div class="col-lg-12">
+										<button class="btn btn-success" onclick="rechercheType()">Rechercher</button>
+									</div>
+
+								</div>
+								
 							</div>
-							
+
 
 							<!-- Modal -->
 							<div class="modal fade" id="myModal" role="dialog">
@@ -99,7 +117,10 @@
 						<c:forEach var="iterator" items="${mag}">
 							<div class="col-sm-4">
 								<div class="panel panel-primary">
-									<div class="panel-heading"><a class="lienColor" href="DetailMagasin.do?mag=${iterator.id}">${iterator.nom}</a></div>
+									<div class="panel-heading">
+										<a class="lienColor"
+											href="DetailMagasin.do?mag=${iterator.id}">${iterator.nom}</a>
+									</div>
 									<div class="panel-body">
 										<img src="https://placehold.it/150x80?text=IMAGE"
 											class="img-responsive" style="width: 100%" alt="Image">

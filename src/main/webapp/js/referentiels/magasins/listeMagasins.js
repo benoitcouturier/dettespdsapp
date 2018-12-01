@@ -2,6 +2,32 @@ $(document).ready(function(){
 	$('#listeLienNav')[0].children[1].setAttribute('class','active');
 	console.log($("#btnRecherche"));
 	$( "#divRecherche" ).toggle( "slow" );
+	var rechercheType = $('#rechercheType')[0];
+
+	$.ajax({
+		headers: { 
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		dataType : "json",
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/TypeMagasin/tous',
+		type : 'GET',
+		crossDomain : true,
+		success : function(msg) {
+			console.log(msg);
+
+			if(rechercheType.options.length != msg.length){
+				rechercheType.options.length=0;
+				for(var i=0 ; i< msg.length ; i++){
+					var opt = new Option();
+					opt.value=msg[i].id;
+					opt.innerHTML=msg[i].id + "-" + msg[i].type;
+					rechercheType.appendChild(opt);
+				}	
+			}
+		}
+
+	});
 });
 
 
@@ -13,12 +39,12 @@ function toggleRecherche() {
 function modalAjout() {
 	console.log('Ajout Modal');
 	// select emplacement
-	
+
 	var nom = $('#nameMagasin')[0];
 	var description = $('#description')[0];
 	nom.value='';
 	description.value='';
-	
+
 	var selectEmplacement = $('#numEmplacement')[0];
 
 	// recupération tous les emplacements disponibles
@@ -163,3 +189,37 @@ function rechargerListe(){
 
 }
 
+function rechercheType(){
+	var rechercheType = $('#rechercheType')[0].value;
+	var listeMagasins = $('#listeMagasins')[0];
+	listeMagasins.innerHTML= '<div class="loader"></div>';
+	$.ajax({
+		headers: { 
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		dataType : "json",
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/rechercheType/'+rechercheType,
+		type : 'GET',
+		crossDomain : true,
+		success : function(msg) {
+			console.log(msg);
+			listeMagasins.innerHTML= '';
+			for(var i=0; i< msg.length ; i++){
+				var divMag = 
+					'<div class="col-sm-4">'+
+					'	<div class="panel panel-primary">'+
+					'		<div class="panel-heading"><a class="lienColor" href="DetailMagasin.do?mag='+msg[i].id+'">'+ msg[i].nom +'</a></div>'+
+					'		<div class="panel-body">'+
+					'			<img src="https://placehold.it/150x80?text=IMAGE"'+
+					'			class="img-responsive" style="width: 100%" alt="Image">'+
+					'		</div>'+
+					'		<div class="panel-footer">Ouvert 7j/7 en periode de Noel.</div>'+
+					'	</div>'+
+					'</div>';
+				console.log(divMag);
+				listeMagasins.innerHTML+=divMag;
+			}
+		}
+	});
+}

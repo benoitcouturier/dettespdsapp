@@ -27,6 +27,8 @@ function modalAjout() {
 			for(var i=0 ; i< msg.length-1 ; i++){
 				var opt = new Option();
 				console.log(opt);
+				opt.value=msg[i].id;
+				opt.innerHTML=msg[i].id;
 			}
 		}
 	});

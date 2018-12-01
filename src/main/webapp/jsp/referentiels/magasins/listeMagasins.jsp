@@ -32,7 +32,7 @@
 							<div id="divRecherche">
 								<p>Affichage Recherche</p>
 							</div>
-
+							
 
 							<!-- Modal -->
 							<div class="modal fade" id="myModal" role="dialog">
@@ -94,7 +94,7 @@
 						</div>
 
 					</div>
-
+					<br>
 					<!--  Liste de magasins  -->
 					<div class="row">
 						<c:forEach var="iterator" items="${mag}">
@@ -105,7 +105,7 @@
 										<img src="https://placehold.it/150x80?text=IMAGE"
 											class="img-responsive" style="width: 100%" alt="Image">
 									</div>
-									<div class="panel-footer">Emplacement :</div>
+									<div class="panel-footer">Ouvert 7j/7 en période de Noel.</div>
 								</div>
 							</div>
 						</c:forEach>

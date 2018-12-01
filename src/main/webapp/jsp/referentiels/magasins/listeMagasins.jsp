@@ -45,15 +45,38 @@
 											<h4 class="modal-title">Ajouter Magasin</h4>
 										</div>
 										<div class="modal-body">
-											<label for="nameMagasin">Nom du Magasin</label>
-											<input type="text" name="nameMagasin" id="nameMagasin"/>
-											<label for="numEmplacement">Emplacement</label>
-											<select name="numEmplacement" id="numEmplacement"></select>
-											<label for="numType">Type de Magasin</label>
-											<select name="numType" id="numType"></select>
-											<label for="description">Description</label>
-											<textarea name="description" id="description" maxlength="250"></textarea>
-											
+
+											<div class="row">
+
+												<div class="col-lg-6">
+													<div>
+														<label for="nameMagasin">Nom du Magasin :</label> <input
+															class="form-control" type="text" name="nameMagasin"
+															id="nameMagasin" />
+													</div>
+													<div>
+														<label for="numEmplacement">Emplacement</label> <select
+															class="form-control" name="numEmplacement"
+															id="numEmplacement"></select>
+													</div>
+												</div>
+
+												<div class="col-lg-6">
+													<div>
+														<label for="numType">Type de Magasin</label> <select
+															class="form-control" name="numType" id="numType"></select>
+													</div>
+													<div>
+														<label for="description">Description</label>
+														<textarea class="form-control" name="description"
+															id="description" maxlength="250"></textarea>
+													</div>
+												</div>
+
+											</div>
+
+
+
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-primary"
@@ -75,12 +98,12 @@
 						<%-- <c:forEach var="iterator" begin="0" end="mag.size()-1"> --%>
 						<div class="col-sm-4">
 							<div class="panel panel-primary">
-								<div class="panel-heading">Magasin Nom </div>
+								<div class="panel-heading">Magasin Nom</div>
 								<div class="panel-body">
 									<img src="https://placehold.it/150x80?text=IMAGE"
 										class="img-responsive" style="width: 100%" alt="Image">
 								</div>
-								<div class="panel-footer">Emplacement : </div>
+								<div class="panel-footer">Emplacement :</div>
 							</div>
 						</div>
 						<%-- </c:forEach> --%>

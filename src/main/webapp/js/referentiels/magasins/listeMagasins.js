@@ -120,6 +120,19 @@ function envoiFormulaireMagasin(){
 
 function rechargerListe(){
 	var listeMagasins = $('#listeMagasins')[0];
-	console.log(listeMagasins);
+	listesMagasins.innerHTML= "";
+	$.ajax({
+		headers: { 
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		dataType : "json",
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasins/tous',
+		type : 'GET',
+		crossDomain : true,
+		success : function(msg) {
+			console.log(msg);
+		}
+	});
 }
 

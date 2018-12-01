@@ -120,7 +120,7 @@ function envoiFormulaireMagasin(){
 
 function rechargerListe(){
 	var listeMagasins = $('#listeMagasins')[0];
-	listesMagasins.innerHTML= "";
+	listeMagasins.innerHTML= "";
 	$.ajax({
 		headers: { 
 			'Accept': 'application/json',

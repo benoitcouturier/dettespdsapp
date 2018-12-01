@@ -12,6 +12,11 @@ function toggleRecherche() {
 function modalAjout() {
 	console.log('Ajout Modal');
 	$.ajax({
+		headers: { 
+	        'Accept': 'application/json',
+	        'Content-Type': 'application/json',
+	        'Access-Control-Allow-Origin ': 'http://localhost:8080/'
+	    },
 		dataType : "json",
 		url : 'http://localhost:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
 		type : 'GET',

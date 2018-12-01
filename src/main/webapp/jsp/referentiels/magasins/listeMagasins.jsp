@@ -50,12 +50,13 @@
 
 												<div class="col-lg-6">
 													<div>
-														<label for="nameMagasin">Nom du Magasin :</label> <input
+														<label for="nameMagasin">Nom du Magasin : </label> <input
 															class="form-control" type="text" name="nameMagasin"
 															id="nameMagasin" />
 													</div>
+													<br>
 													<div>
-														<label for="numEmplacement">Emplacement</label> <select
+														<label for="numEmplacement">Emplacement : </label> <select
 															class="form-control" name="numEmplacement"
 															id="numEmplacement"></select>
 													</div>
@@ -63,11 +64,12 @@
 
 												<div class="col-lg-6">
 													<div>
-														<label for="numType">Type de Magasin</label> <select
+														<label for="numType">Type de Magasin : </label> <select
 															class="form-control" name="numType" id="numType"></select>
 													</div>
+													<br>
 													<div>
-														<label for="description">Description</label>
+														<label for="description">Description : </label>
 														<textarea class="form-control" name="description"
 															id="description" maxlength="250"></textarea>
 													</div>

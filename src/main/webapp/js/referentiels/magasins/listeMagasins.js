@@ -11,6 +11,7 @@ function toggleRecherche() {
 
 function modalAjout() {
 	console.log('Ajout Modal');
+	// select emplacement
 	var selectEmplacement = $('#numEmplacement')[0];
 	console.log(selectEmplacement);
 	// recupération tous les emplacements disponibles
@@ -27,7 +28,7 @@ function modalAjout() {
 			console.log(msg);
 			
 			if(selectEmplacement.options.length != msg.length){
-				selectEmplacement.options = null;
+				selectEmplacement.empty = null;
 				for(var i=0 ; i< msg.length-1 ; i++){
 					var opt = new Option();
 					opt.value=msg[i].id;

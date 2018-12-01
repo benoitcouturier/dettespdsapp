@@ -28,7 +28,7 @@ function modalAjout() {
 			console.log(msg);
 			
 			if(selectEmplacement.options.length != msg.length){
-				selectEmplacement.empty();
+				selectEmplacement.options.length=0;
 				for(var i=0 ; i< msg.length-1 ; i++){
 					var opt = new Option();
 					opt.value=msg[i].id;

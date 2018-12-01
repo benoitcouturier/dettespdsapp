@@ -113,6 +113,8 @@ function envoiFormulaireMagasin(){
 		$("#closeModal").trigger("click");
 		var listeMagasins = $('#listeMagasins')[0];
 		listeMagasins.innerHTML= '<div class="loader"></div>';
+		rechargerListe();// aeffacer
+		
 	}else{
 		alert('Entrer un nom de magasin.');
 	}

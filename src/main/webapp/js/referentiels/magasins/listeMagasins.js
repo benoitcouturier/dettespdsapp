@@ -132,6 +132,7 @@ function rechargerListe(){
 		crossDomain : true,
 		success : function(msg) {
 			console.log(msg);
+			listeMagasins.innerHTML= '';
 		}
 	});
 	

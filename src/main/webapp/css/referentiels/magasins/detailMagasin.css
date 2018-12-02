@@ -22,3 +22,7 @@ body{
 .lienColor:hover{
 	color: rgb(200,200,200);
 }
+
+.hiddenData{
+	display: none;
+}]

@@ -17,7 +17,7 @@
 				<h3>${mag.nom}</h3>
 				<p>
 					Type de magasin : <span id="typeMagasin"></span><br>
-					Emplacement : <span id="emlpacement"></span>
+					Emplacement : <span id="emplacement"></span>
 				</p>
 				<span class="hiddenData" id="idType">${mag.idType}</span>
 				

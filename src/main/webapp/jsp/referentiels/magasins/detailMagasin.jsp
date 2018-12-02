@@ -16,10 +16,12 @@
 			<div class="col-lg-12">
 				<h3>${mag.nom}</h3>
 				<p>
-					Type de magasin : <span id="typeMagasin"></span>
+					Type de magasin : <span id="typeMagasin"></span><br>
+					Emplacement : <span id="emlpacement"></span>
 				</p>
-				<span class="hiddenData" id="idType"></span> <span
-					class="hiddenData" id="idEmplacement"></span>
+				<span class="hiddenData" id="idType">${mag.idType}</span>
+				
+				<span class="hiddenData" id="idEmplacement">${mag.idEmplacement}</span>
 			</div>
 
 		</div>
@@ -63,8 +65,8 @@
 
 			</div>
 		</div>
-		
-		
+
+
 	</div>
 </body>
 

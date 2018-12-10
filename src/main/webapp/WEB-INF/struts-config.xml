@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+	<form-beans>
+		<form-bean name="TestStrutsActionForm"
+			type="servlets.TestStrutsActionForm" />
+		<form-bean name="MagasinActionForm"
+			type="servlets.referentiels.magasins.MagasinActionForm" />
+		<form-bean name="Formulaire"
+			type="servlets.referentiels.tarifsLivraison.Formulaire" />
+		<form-bean name="ProfilsActionForm"
+			type="servlets.referentiels.profils.ProfilsActionForm" />
+		<form-bean name="ProductActionForm"
+			type="servlets.referentiels.produitsVendus.ProductActionForm" />
+		<form-bean name="ClientActionForm"
+			type="servlets.referentiels.client.ClientActionForm" />
+
+	</form-beans>
+
+	<global-exceptions>
+
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="welcome" path="/Welcome.do" />
+	</global-forwards>
+
+	<action-mappings>
+		<action name="TestStrutsActionForm" path="/TestStruts"
+			scope="session" type="servlets.TestStrutsAction">
+			<forward name="success" path="/jsp/test.jsp" />
+		</action>
+		<action name="TestStrutsActionForm" path="/Form"
+			scope="session" type="servlets.FormulaireAction">
+			<forward name="success" path="/jsp/test.jsp" />
+		</action>
+
+
+		<!-- MAGASINS -->
+		<action name="MagasinActionForm" path="/Magasin"
+			scope="session" type="servlets.referentiels.magasins.MagasinAction">
+			<forward name="success"
+				path="/jsp/referentiels/magasins/listeMagasins.jsp" />
+		</action>
+		<action name="DetailMagasinActionForm" path="/DetailMagasin"
+			scope="session"
+			type="servlets.referentiels.magasins.DetailMagasinAction">
+			<forward name="success"
+				path="/jsp/referentiels/magasins/detailMagasin.jsp" />
+		</action>
+
+		<!-- Product -->
+		<action name="ProductActionForm" path="/Product"
+			scope="session"
+			type="servlets.referentiels.produitsVendus.ProductAction">
+			<forward name="success"
+				path="/jsp/referentiels/produitsVendus/listeProduct.jsp" />
+		</action>
+
+		<!-- Profil -->
+		<action name="ProfilsActionForm" path="/Profil" scope="session"
+			type="servlets.referentiels.profils.ProfilsAction">
+			<forward name="success"
+				path="/jsp/referentiels/profils/profil.jsp" />
+		</action>
+
+		<!-- Tarifs -->
+		<action name="Formulaire" path="/add_method_price_delivery"
+			scope="session"
+			type="servlets.referentiels.tarifsLivraison.AjoutMethodeForm">
+			<forward name="success"
+				path="/jsp/referentiels/tarifsLivraison/tarifsLivraison_page.jsp" />
+		</action>
+
+
+		<action name="Tarifs_livraison" path="/tarifs_livraison"
+			scope="session"
+			type="servlets.referentiels.tarifsLivraison.TarifLivraisonAction">
+			<forward name="success"
+				path="/jsp/referentiels/tarifsLivraison/tarifsLivraison_page.jsp" />
+		</action>
+
+		<!-- Client -->
+		<action name="ClientActionForm" path="/Connexion"
+			scope="session" type="servlets.referentiels.client.ClientAction">
+			<forward name="success"
+				path="/jsp/referentiels/client/client.jsp" />
+		</action>
+
+		<action name="Formulaire" path="/FormTarifs" scope="session"
+			type="servlets.referentiels.tarifsLivraison.FormulaireAction">
+			<forward name="success" path="/jsp/test.jsp" />
+		</action>
+		<action name="TestStrutsActionForm" path="/Accueil"
+			scope="session" type="servlets.AccueilAction">
+			<forward name="success" path="/jsp/accueil.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<controller
+		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+
+
+	<!-- ========================= Tiles plugin =============================== -->
+	<!-- This plugin initialize Tiles definition factory. This later can takes 
+		some parameters explained here after. The plugin first read parameters from 
+		web.xml, thenoverload them with parameters defined here. All parameters are 
+		optional. The plugin should be declared in each struts-config file. - definitions-config: 
+		(optional) Specify configuration file names. There can be several comma separated 
+		file names (default: ?? ) - moduleAware: (optional - struts1.1) Specify if 
+		the Tiles definition factory is module aware. If true (default), there will 
+		be one factory for each Struts module. If false, there will be one common 
+		factory for all module. In this later case, it is still needed to declare 
+		one plugin per module. The factory will be initialized with parameters found 
+		in the first initialized plugin (generally the one associated with the default 
+		module). true : One factory per module. (default) false : one single shared 
+		factory for all modules - definitions-parser-validate: (optional) Specify 
+		if xml parser should validate the Tiles configuration file. true : validate. 
+		DTD should be specified in file header (default) false : no validation Paths 
+		found in Tiles definitions are relative to the main context. -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+
+	<!-- ========================= Validator plugin ================================= -->
+	<plug-in
+		className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+	</plug-in>
+
+</struts-config>

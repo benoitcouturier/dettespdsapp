@@ -14,7 +14,7 @@ $(document).ready(function(){
 			'Content-Type': 'application/json'
 		},
 		dataType : "json",
-		url : 'http://192.168.20.3:8080/ApiRest/RestGT/TypeMagasin/tous',
+		url : 'http://192.168.20.3:8080/ApiRest/Rest/TypeMagasin/tous',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
@@ -58,7 +58,7 @@ function modalAjout() {
 			'Content-Type': 'application/json'
 		},
 		dataType : "json",
-		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/emplacementsDisponibles',
+		url : 'http://192.168.20.3:8080/ApiRest/Rest/Emplacement/emplacementsDisponibles',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
@@ -85,7 +85,7 @@ function modalAjout() {
 			'Content-Type': 'application/json'
 		},
 		dataType : "json",
-		url : 'http://192.168.20.3:8080/ApiRest/RestGT/TypeMagasin/tous',
+		url : 'http://192.168.20.3:8080/ApiRest/Rest/TypeMagasin/tous',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
@@ -132,7 +132,7 @@ function envoiFormulaireMagasin(){
 			dataType : 'json',
 
 			// url API
-			url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/create',
+			url : 'http://192.168.20.3:8080/ApiRest/Rest/Magasin/create',
 
 			// Type method : POST PUT GET
 			type: 'POST',  
@@ -166,7 +166,7 @@ function rechargerListe(){
 			'Content-Type': 'application/json'
 		},
 		dataType : "json",
-		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/tous',
+		url : 'http://192.168.20.3:8080/ApiRest/Rest/Magasin/tous',
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
@@ -205,7 +205,7 @@ function rechercheType(){
 				'Content-Type': 'application/json'
 			},
 			dataType : "json",
-			url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/rechercheType/'+rechercheType,
+			url : 'http://192.168.20.3:8080/ApiRest/Rest/Magasin/rechercheType/'+rechercheType,
 			type : 'GET',
 			crossDomain : true,
 			success : function(msg) {

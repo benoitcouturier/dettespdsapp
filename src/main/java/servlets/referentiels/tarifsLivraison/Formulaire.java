@@ -1,32 +1,19 @@
 package servlets.referentiels.tarifsLivraison;
 
-import Entites.Personne;
-import Entites.referentiels.tarifsLivraison.Withdrawal_price;
+import Entites.referentiels.tarifsLivraison.Withdrawal_method;
 
 public class Formulaire extends org.apache.struts.action.ActionForm {
 
 	private static final long serialVersionUID = 1L;
 	
 	private String message;
-	private Personne[] p;
-	private String idCommande;
-	private Withdrawal_price[] wps;
+	private Withdrawal_method wm;
+	private Withdrawal_method[] wms;
 	
 
 	public Formulaire() {
 		super();
 	}
-
-	
-	public Personne[] getP() {
-		return p;
-	}
-
-
-	public void setP(Personne[] p) {
-		this.p = p;
-	}
-
 
 	public String getMessage() {
 		return message;
@@ -36,24 +23,23 @@ public class Formulaire extends org.apache.struts.action.ActionForm {
 		this.message = message;
 	}
 
-
-	public String getIdCommande() {
-		return idCommande;
+	public Withdrawal_method getWm() {
+		return wm;
 	}
 
 
-	public void setIdCommande(String idCommande) {
-		this.idCommande = idCommande;
+	public void setWm(Withdrawal_method wm) {
+		this.wm = wm;
 	}
 
 
-	public Withdrawal_price[] getWps() {
-		return wps;
+	public Withdrawal_method[] getWms() {
+		return wms;
 	}
 
 
-	public void setWps(Withdrawal_price[] wps) {
-		this.wps = wps;
+	public void setWms(Withdrawal_method[] wms) {
+		this.wms = wms;
 	}
 
 }

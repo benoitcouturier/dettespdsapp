@@ -70,7 +70,7 @@
                 dataType : 'json',
 
                 // url API
-                url : 'http://localhost:8080/ApiRest/RestGT/Profil/create',
+                url : 'http://192.168.20.3:8080/ApiRest/RestGT/Profil/create',
 
                 // Type method : POST PUT GET
                 type: 'POST',

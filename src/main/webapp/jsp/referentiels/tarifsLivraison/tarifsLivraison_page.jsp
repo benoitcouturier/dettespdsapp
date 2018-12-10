@@ -122,6 +122,7 @@
 			// MSG IF success
 			success : function(msg) {
 				console.log(msg);
+				location.reload();
 				
 			}
 		});

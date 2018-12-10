@@ -124,7 +124,7 @@ input[type=submit] {
 				dataType : 'json',
 
 				// url API
-				url : 'http://localhost:8080/ApiRest/RestGT/Client/create',
+				url : 'http://192.168.20.3:8080/ApiRest/RestGT/Client/create',
 
 				// Type method : POST PUT GET
 				type: 'POST',  

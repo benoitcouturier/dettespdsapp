@@ -37,6 +37,10 @@
             <forward name="success" path="/jsp/referentiels/magasins/detailMagasin.jsp" />
         </action>
         
+        <!-- Product -->
+        <action name="ProductActionForm" path="/Product" scope="session" type="servlets.referentiels.produitsVendus.ProductAction">
+            <forward name="success" path="/jsp/referentiels/produitsVendus/listeProduct.jsp" />
+        </action>
         
         <action name="Formulaire" path="/FormTarifs" scope="session" type="servlets.referentiels.tarifsLivraison.FormulaireAction">
             <forward name="success" path="/jsp/test.jsp" />

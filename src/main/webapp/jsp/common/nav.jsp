@@ -9,7 +9,7 @@
     <ul id="listeLienNav" class="nav navbar-nav">
       <li><a href="Accueil.do">Home</a></li>
       <li><a href="Magasin.do">Magasins</a></li>
-      <li><a href="#">Produits</a></li>
+      <li><a href="Product.do">Produits</a></li>
       <li><a href="#">Parcours</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">

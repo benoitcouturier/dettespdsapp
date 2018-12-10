@@ -1,11 +1,10 @@
 package servlets;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.struts.action.*;
-
 import Entites.Personne;
 import getFromApi.GetApi;
+import org.apache.struts.action.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class TestStrutsAction extends org.apache.struts.action.Action {
 

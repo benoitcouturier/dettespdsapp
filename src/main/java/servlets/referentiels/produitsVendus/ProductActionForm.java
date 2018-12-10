@@ -1,12 +1,16 @@
-package Entites.referentiels.produitsVendus;
+package servlets.referentiels.produitsVendus;
 
-public class Product {
+public class ProductActionForm extends org.apache.struts.action.ActionForm {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private String pname;
 	private int pid,pqte,sid,psid,ptid;
 	private float price;
 	
-
 	public float getPrice() {
 		return price;
 	}

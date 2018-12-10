@@ -28,7 +28,6 @@
 		<div class="row">
 			<div class="col col-lg-12">
 
-				<form>
 					<div class="form-group">
 						<label for="wm_name">Nom du mode</label> <input type="text"
 							class="form-control" id="wm_name"
@@ -47,7 +46,6 @@
 
 					<button onclick="formulaireTarif()" class="btn btn-primary">Enregistrer</button>
 
-				</form>
 			</div>
 		</div>
 	</div>

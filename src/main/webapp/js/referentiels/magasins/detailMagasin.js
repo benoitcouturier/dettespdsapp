@@ -9,7 +9,7 @@ $(document).ready(function(){
 			'Content-Type': 'application/json'
 		},
 		dataType : "json",
-		url : 'http://192.168.20.3:8080/ApiRest/Rest/TypeMagasin/find/'+typeMagasin,
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/TypeMagasin/find/'+typeMagasin,
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
@@ -29,7 +29,7 @@ $(document).ready(function(){
 			'Content-Type': 'application/json'
 		},
 		dataType : "json",
-		url : 'http://192.168.20.3:8080/ApiRest/Rest/Emplacement/find/'+emplacement,
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/find/'+emplacement,
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
@@ -56,7 +56,7 @@ function supprimerMagasin(e){
 		dataType : 'json',
 
 		// url API
-		url : 'http://192.168.20.3:8080/ApiRest/Rest/Magasin/delete',
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/delete',
 
 		// Type method : POST PUT GET
 		type: 'POST',  

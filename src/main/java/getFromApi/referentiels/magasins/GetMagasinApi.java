@@ -20,7 +20,7 @@ public class GetMagasinApi {
 
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(
-					"http://localhost:8080/ApiRest/Rest/Magasin/tous");
+					"http://localhost:8080/ApiRest/RestGT/Magasin/tous");
 			getRequest.addHeader("accept", "application/json");
 
 			HttpResponse response = httpClient.execute(getRequest);
@@ -71,7 +71,7 @@ public class GetMagasinApi {
 		try {
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(
-					"http://localhost:8080/ApiRest/Rest/find/"+id);
+					"http://localhost:8080/ApiRest/RestGT/find/"+id);
 			getRequest.addHeader("accept", "application/json");
 
 			HttpResponse response = httpClient.execute(getRequest);

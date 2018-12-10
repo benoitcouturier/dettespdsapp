@@ -113,7 +113,7 @@
 			dataType : 'json',
 
 			// url API
-			url : 'http://localhost:8080/ApiRest/RestGT/WM/add',
+			url : 'http://192.168.20.3:8080/ApiRest/RestGT/WM/add',
 
 			// Type method : POST PUT GET
 			type : 'POST',
@@ -124,7 +124,7 @@
 			// MSG IF success
 			success : function(msg) {
 				console.log(msg);
-				//location.reload();
+				
 			}
 		});
 

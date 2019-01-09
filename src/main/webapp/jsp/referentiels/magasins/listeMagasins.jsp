@@ -38,7 +38,7 @@
 											class="form-control" id="rechercheType" name="rechercheType"
 											onchange="rechercheType()"></select>
 											 <label for="rechercheNom"> Nom de magasin</label> 
-											<input type="text" onchange="rechercheNom()"class="form-control" id="rechercheNom" name="rechercheNom">
+											<input type="text" onkeydown="rechercheNom()"class="form-control" id="rechercheNom" name="rechercheNom">
 
 
 									</div>

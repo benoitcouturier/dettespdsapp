@@ -280,4 +280,5 @@ function rechercheType(){
 		}else{
 			rechargerListe();
 		}
+	}
 }

@@ -226,7 +226,9 @@ function rechercheType(){
 						'</div>';
 					listeMagasins.innerHTML+=divMag;
 				}
-				
+				if(msg.nom == "Pas de Resultat pour cette categorie"){
+					listeMagasins.innerHTML+=msg.nom;
+				}
 			}
 		});
 	}else{

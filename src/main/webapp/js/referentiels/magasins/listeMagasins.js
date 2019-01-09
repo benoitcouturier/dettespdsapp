@@ -7,7 +7,7 @@ $(document).ready(function(){
 	optChoose.value=0;
 	optChoose.innerHTML='Choisir un type ...';
 	rechercheType.appendChild(optChoose);
-	
+
 	$.ajax({
 		headers: { 
 			'Accept': 'application/json',
@@ -21,7 +21,7 @@ $(document).ready(function(){
 			console.log(msg);
 
 			if(rechercheType.options.length != msg.length){
-				
+
 				for(var i=0 ; i< msg.length ; i++){
 					var opt = new Option();
 					opt.value=msg[i].id;
@@ -197,7 +197,7 @@ function rechercheType(){
 	var rechercheType = $('#rechercheType')[0].value;
 	var listeMagasins = $('#listeMagasins')[0];
 	listeMagasins.innerHTML= '<div class="loader"></div>';
-	
+
 	if(rechercheType != 0){ // recherche pas vide
 		$.ajax({
 			headers: { 
@@ -235,48 +235,48 @@ function rechercheType(){
 	}else{
 		rechargerListe();
 	}
-	
-	function rechercheNom(){
-		var rechercheNom = $('#rechercheNom')[0].value;
-		var listeMagasins = $('#listeMagasins')[0];
-		listeMagasins.innerHTML= '<div class="loader"></div>';
-		
-		if(rechercheNom != "" ){ // recherche pas vide
-			$.ajax({
-				headers: { 
-					'Accept': 'application/json',
-					'Content-Type': 'application/json'
-				},
-				dataType : "json",
-				url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/rechercheNom/'+rechercheNom,
-				type : 'GET',
-				crossDomain : true,
-				success : function(msg) {
-					console.log("retour");
-					console.log(msg);
-					listeMagasins.innerHTML= '';
-					for(var i=0; i< msg.length ; i++){
-						var divMag = 
-							'<div class="col-sm-4">'+
-							'	<div class="panel panel-primary">'+
-							'		<div class="panel-heading"><a class="lienColor" href="DetailMagasin.do?mag='+msg[i].id+'">'+ msg[i].nom +'</a></div>'+
-							'		<div class="panel-body">'+
-							'			<img src="https://placehold.it/150x80?text=IMAGE"'+
-							'			class="img-responsive" style="width: 100%" alt="Image">'+
-							'		</div>'+
-							'		<div class="panel-footer">Ouvert 7j/7 en periode de Noel.</div>'+
-							'	</div>'+
-							'</div>';
-						listeMagasins.innerHTML+=divMag;
-					}
-					if(msg.nom == "Pas de resultats pour ce nom"){
-						console.log("ok");
-						listeMagasins.innerHTML+=msg.nom;
-					}
+}
+function rechercheNom(){
+	var rechercheNom = $('#rechercheNom')[0].value;
+	var listeMagasins = $('#listeMagasins')[0];
+	listeMagasins.innerHTML= '<div class="loader"></div>';
+
+	if(rechercheNom != "" ){ // recherche pas vide
+		$.ajax({
+			headers: { 
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			dataType : "json",
+			url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/rechercheNom/'+rechercheNom,
+			type : 'GET',
+			crossDomain : true,
+			success : function(msg) {
+				console.log("retour");
+				console.log(msg);
+				listeMagasins.innerHTML= '';
+				for(var i=0; i< msg.length ; i++){
+					var divMag = 
+						'<div class="col-sm-4">'+
+						'	<div class="panel panel-primary">'+
+						'		<div class="panel-heading"><a class="lienColor" href="DetailMagasin.do?mag='+msg[i].id+'">'+ msg[i].nom +'</a></div>'+
+						'		<div class="panel-body">'+
+						'			<img src="https://placehold.it/150x80?text=IMAGE"'+
+						'			class="img-responsive" style="width: 100%" alt="Image">'+
+						'		</div>'+
+						'		<div class="panel-footer">Ouvert 7j/7 en periode de Noel.</div>'+
+						'	</div>'+
+						'</div>';
+					listeMagasins.innerHTML+=divMag;
 				}
-			});
-		}else{
-			rechargerListe();
-		}
+				if(msg.nom == "Pas de resultats pour ce nom"){
+					console.log("ok");
+					listeMagasins.innerHTML+=msg.nom;
+				}
+			}
+		});
+	}else{
+		rechargerListe();
 	}
 }
+

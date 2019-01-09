@@ -19,6 +19,8 @@
 			type="servlets.referentiels.produitsVendus.ProductActionForm" />
 		<form-bean name="ClientActionForm"
 			type="servlets.referentiels.client.ClientActionForm" />
+		<form-bean name="SearchClientActionForm"
+			type="servlets.referentiels.client.SearchClientActionForm" />
 
 	</form-beans>
 
@@ -92,6 +94,16 @@
 				path="/jsp/referentiels/client/client.jsp" />
 		</action>
 
+		<!--Search client -->
+
+		<action name="SearchClientActionForm" path="/Admin"
+			scope="session" type="servlets.referentiels.client.SearchClientAction">
+			<forward name="success"
+				path="/jsp/referentiels/client/searchClient.jsp" />
+		</action>
+		
+		<!--  -->
+		
 		<action name="Formulaire" path="/FormTarifs" scope="session"
 			type="servlets.referentiels.tarifsLivraison.FormulaireAction">
 			<forward name="success" path="/jsp/test.jsp" />

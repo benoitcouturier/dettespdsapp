@@ -19,6 +19,8 @@
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span>Inscription</a></li>
 				<li><a href="Connexion.do"><span
 						class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+				<li><a href="Admin.do"><span
+						class="glyphicon glyphicon-log-in"></span> Admin</a></li>		
 			</ul>
 		</div>
 	</nav>

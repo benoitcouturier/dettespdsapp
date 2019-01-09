@@ -194,6 +194,7 @@ function rechargerListe(){
 }
 
 function rechercheType(){
+	$('#rechercheNom')[0].value = "";
 	var rechercheType = $('#rechercheType')[0].value;
 	var listeMagasins = $('#listeMagasins')[0];
 	listeMagasins.innerHTML= '<div class="loader"></div>';
@@ -237,6 +238,7 @@ function rechercheType(){
 	}
 }
 function rechercheNom(){
+	var rechercheType = $('#rechercheType')[0].options[0].selected=true;
 	var rechercheNom = $('#rechercheNom')[0].value;
 	var listeMagasins = $('#listeMagasins')[0];
 	listeMagasins.innerHTML= '<div class="loader"></div>';

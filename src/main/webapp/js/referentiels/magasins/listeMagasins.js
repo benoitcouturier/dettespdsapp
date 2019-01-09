@@ -236,8 +236,6 @@ function rechercheType(){
 		rechargerListe();
 	}
 	
-	
-
 	function rechercheNom(){
 		var rechercheNom = $('#rechercheNom')[0].value;
 		var listeMagasins = $('#listeMagasins')[0];

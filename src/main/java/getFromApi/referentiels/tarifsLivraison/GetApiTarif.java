@@ -14,7 +14,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import Entites.referentiels.tarifsLivraison.Command;
 import Entites.referentiels.tarifsLivraison.Withdrawal_method;
 
-public class GetApi {
+public class GetApiTarif {
 	
 //	public Command[] getCommands() {
 //

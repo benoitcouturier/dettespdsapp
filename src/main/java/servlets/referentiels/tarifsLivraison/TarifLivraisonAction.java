@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.*;
 
 import Entites.referentiels.tarifsLivraison.Withdrawal_method;
-import getFromApi.referentiels.tarifsLivraison.GetApi;
+import getFromApi.referentiels.tarifsLivraison.GetApiTarif;
 import servlets.referentiels.tarifsLivraison.Formulaire;
 
 
@@ -20,10 +20,10 @@ public class TarifLivraisonAction extends org.apache.struts.action.Action {
 	    	System.out.println("Passage à l'onglet tarifs livraison");
 	    	
 	    	Formulaire formulaire = (Formulaire) form;
-	        GetApi objet = new GetApi();
+	        GetApiTarif objet = new GetApiTarif();
 	        Withdrawal_method[] wms = objet.getWMs();
 	        String [] wmNames = objet.getWMNames();
-	        Withdrawal_method[] wmsByName = objet.getWMByNames();
+	        //Withdrawal_method[] wmsByName = objet.getWMByNames();
 	        //formulaire.setWms(wms);
 	        request.setAttribute("wms", wms);
 	        request.setAttribute("wmNames", wmNames);

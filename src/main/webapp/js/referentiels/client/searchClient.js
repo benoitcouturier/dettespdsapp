@@ -6,7 +6,7 @@
 
 
 
-// envoyer info account à l'api
+// envoyer info customer_account à l'api
 	function searchClick(){
 	
 		console.log('Recherche client');
@@ -28,7 +28,7 @@
 				url : 'http://192.168.20.3:8080/ApiRest/RestGT/Admin/'+$location_+''+$notification,
 
 				// Type method : POST PUT GET
-				type: 'POST',  
+				type: 'GET',  
 
 				// parse Object to JSON 
 				data: JSON.stringify(obj), 

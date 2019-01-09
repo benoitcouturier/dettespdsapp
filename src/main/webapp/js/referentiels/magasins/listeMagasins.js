@@ -209,6 +209,7 @@ function rechercheType(){
 			type : 'GET',
 			crossDomain : true,
 			success : function(msg) {
+				console.log("retour");
 				console.log(msg);
 				listeMagasins.innerHTML= '';
 				for(var i=0; i< msg.length ; i++){
@@ -223,8 +224,10 @@ function rechercheType(){
 						'		<div class="panel-footer">Ouvert 7j/7 en periode de Noel.</div>'+
 						'	</div>'+
 						'</div>';
-					console.log(divMag);
 					listeMagasins.innerHTML+=divMag;
+				}
+				if(msg.nom == "Pas de Resultat pour cette categorie"){
+					listeMagasins.innerHTML+=msg.nom;
 				}
 			}
 		});

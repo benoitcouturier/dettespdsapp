@@ -238,7 +238,8 @@ function rechercheType(){
 	}
 }
 function rechercheNom(){
-	var rechercheType = $('#rechercheType')[0].option[0].selected=true;
+	var rechercheType = $('#rechercheType')[0];
+	console.log(rechercheType);
 	var rechercheNom = $('#rechercheNom')[0].value;
 	var listeMagasins = $('#listeMagasins')[0];
 	listeMagasins.innerHTML= '<div class="loader"></div>';

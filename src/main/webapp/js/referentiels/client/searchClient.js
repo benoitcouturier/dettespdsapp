@@ -25,7 +25,7 @@
 				dataType : 'json',
 
 				// url API
-				url : 'http://192.168.20.3:8080/ApiRest/RestGT/Admin/search',
+				url : 'http://192.168.20.3:8080/ApiRest/RestGT/Admin/'+$location_+''+$notification,
 
 				// Type method : POST PUT GET
 				type: 'POST',  

@@ -12,13 +12,11 @@
 
 <body>
 <div style="margin-top: 75px;">
-			<!--  Recherche De magasin  -->
 
 
 						<div class="contents">
 <!---->
-							<button id="buttonSearch" 
-								onclick="toggleRecherche()">Recherche</button>
+							
 						
 							<div id="divRecherche">
 								<div class="row">
@@ -28,8 +26,6 @@
 									</div>
 									<div>
 										<label for="rechercheLocation">Geolocalisation : </label> 
-										<select	class="form-control" id="rechercheType"
-											name="rechercheType" onchange="rechercheType()"></select>
 											<FORM> 
 												<INPUT type="checkbox" name="locationOk" value="l_ok">oui
 												<INPUT type="checkbox" name="locationKo" value="l_ko">non
@@ -37,8 +33,6 @@
 									</div>
 									<div>
 										<label for="rechercheNotification">Notification : </label> 
-										<select	class="form-control" id="rechercheType"
-											name="rechercheType" onchange="rechercheType()"></select>
 											<FORM> 
 												<INPUT type="checkbox" name="popupOk" value="p_ok">oui
 												<INPUT type="checkbox" name="popupKo" value="p_ko">non
@@ -50,8 +44,6 @@
 												<INPUT type="checkbox" name="female" value="F">Femme
 												<INPUT type="checkbox" name="male" value="M">Homme
 											</FORM>
-										<select	class="form-control" id="rechercheType"
-											name="rechercheType" onchange="rechercheType()"></select>
 									</div>
 
 								</div>
@@ -59,8 +51,7 @@
 
 								</div>
 								
-							</div>	
-   <input type="button" id="Valider" onclick="buttonclick()" value="Valider">
+   								<button id="buttonSearch" onclick="searchClick()">Recherche</button>
  
 </div>
 </div>

@@ -9,12 +9,16 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.codehaus.jackson.map.ObjectMapper;
+
+import Entites.portail.gererSonCompteClient.Customer;
 import Entites.portail.gererSonCompteClient.Person;
 
 public class GetClientApi {
 
-}	
-	/*public Client[] get() {
+
+
+//à modifier
+public Customer[] get() {
 
 		try {
 			// appel api
@@ -47,7 +51,7 @@ public class GetClientApi {
 			
 			// parse du JSON en Objet java
 			ObjectMapper mapper = new ObjectMapper();
-			Client[] p = mapper.readValue(resp, Client[].class);
+			Customer[] p = mapper.readValue(resp, Customer[].class);
 			
 			// ferme la connexion
 			httpClient.getConnectionManager().shutdown();
@@ -66,4 +70,4 @@ public class GetClientApi {
 		return null;
 			
 	}
-}*/
+}

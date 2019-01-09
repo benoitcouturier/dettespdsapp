@@ -11,7 +11,7 @@
 
 <body>
 	<div style="margin-top: 75px;">
-		<div class="contents">
+		<div class="container">
 			<!---->
 
 			<div id="divRecherche">

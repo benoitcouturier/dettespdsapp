@@ -21,6 +21,7 @@ public class TarifLivraisonAction extends org.apache.struts.action.Action {
 	    	Formulaire formulaire = (Formulaire) form;
 	        GetApi objet = new GetApi();
 	        Withdrawal_method[] wms = objet.getWMs();
+	        String [] wmNames = objet.getWMNames();
 	        //formulaire.setWms(wms);
 	        request.setAttribute("wms", wms);
 	        

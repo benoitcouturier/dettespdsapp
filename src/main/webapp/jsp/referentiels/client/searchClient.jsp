@@ -7,53 +7,49 @@
 <html>
 <%@ include file="/html/common/header.html"%>
 <%@ include file="/jsp/common/nav.jsp"%>
-<%@ include	file="/html/referentiels/client/searchClientLink_js_css.html"%>
 
 
 <body>
-<div style="margin-top: 75px;">
+	<div style="margin-top: 75px;">
+		<div class="contents">
+			<!---->
 
+			<div id="divRecherche">
+				<div class="row">
 
-						<div class="contents">
-<!---->
-							
-						
-							<div id="divRecherche">
-								<div class="row">
-									
-									<div>
-										<label for="rechercheName">Nom: </label> 
-									</div>
-									<div>
-										<label for="rechercheLocation">Geolocalisation : </label> 
-											<FORM> 
-												<INPUT type="checkbox" name="locationOk" value="l_ok">oui
-												<INPUT type="checkbox" name="locationKo" value="l_ko">non
-											</FORM>
-									</div>
-									<div>
-										<label for="rechercheNotification">Notification : </label> 
-											<FORM> 
-												<INPUT type="checkbox" name="popupOk" value="p_ok">oui
-												<INPUT type="checkbox" name="popupKo" value="p_ko">non
-											</FORM>
-									</div>
-									<div>
-										<label for="rechercheSexe">Sexe : </label>
-										<FORM> 
-												<INPUT type="checkbox" name="female" value="F">Femme
-												<INPUT type="checkbox" name="male" value="M">Homme
-											</FORM>
-									</div>
+					<div>
+						<label for="rechercheName">Nom: </label>
+					</div>
+					<div>
+						<label for="rechercheLocation">Geolocalisation : </label>
+						<FORM>
+							<INPUT type="checkbox" name="locationOk" value="l_ok">oui
+							<INPUT type="checkbox" name="locationKo" value="l_ko">non
+						</FORM>
+					</div>
+					<div>
+						<label for="rechercheNotification">Notification : </label>
+						<FORM>
+							<INPUT type="checkbox" name="popupOk" value="p_ok">oui <INPUT
+								type="checkbox" name="popupKo" value="p_ko">non
+						</FORM>
+					</div>
+					<div>
+						<label for="rechercheSexe">Sexe : </label>
+						<FORM>
+							<INPUT type="checkbox" name="female" value="F">Femme <INPUT
+								type="checkbox" name="male" value="M">Homme
+						</FORM>
+					</div>
 
-								</div>
-								<div class="row">
+				</div>
+				<div class="row"></div>
 
-								</div>
-								
-   								<button id="buttonSearch" onclick="searchClick()">Recherche</button>
- 
-</div>
-</div>
+				<button id="buttonSearch" onclick="searchClick()">Recherche</button>
+
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

@@ -23,12 +23,6 @@ public class SearchClientAction extends org.apache.struts.action.Action{
     	System.out.println("Action TestStruts");
         SearchClientActionForm s_clientForm = (SearchClientActionForm) form;
         
-		GetClientApi objet = new GetClientApi();
-		
-
-        Customer[] c = objet.get();
-        request.setAttribute("cl", c);
-        
         return mapping.findForward(SUCCESS);
 
     }

@@ -34,17 +34,18 @@
 
 									<div class="col-lg-6">
 
-										<label for="rechercheType">Type de magasin : </label> 
-										<select	class="form-control" id="rechercheType"
-											name="rechercheType" onchange="rechercheType()"></select>
-										
+										<label for="rechercheType">Type de magasin : </label> <select
+											class="form-control" id="rechercheType" name="rechercheType"
+											onchange="rechercheType()"></select>
+											 <label for="rechercheNom"> Nom de magasin</label> 
+											<input type="text" onchange="rechercheNom()"class="form-control" id="rechercheNom" name="rechercheNom">
+
+
 									</div>
 
 								</div>
-								<div class="row">
+								<div class="row"></div>
 
-								</div>
-								
 							</div>
 
 

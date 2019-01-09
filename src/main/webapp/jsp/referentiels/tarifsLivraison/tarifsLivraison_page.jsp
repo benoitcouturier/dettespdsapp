@@ -85,7 +85,7 @@
 				<div class="form-group">
 					<select id="wm_names">
 						<c:forEach items="${requestScope['wmNames']}" var="i">
-							<option value="${i}"></option>
+							<option value="${i}">${i}</option>
 						</c:forEach>
 					</select>
 				</div>

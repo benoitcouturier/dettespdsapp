@@ -6,6 +6,7 @@ import org.apache.struts.action.*;
 
 import Entites.referentiels.tarifsLivraison.Withdrawal_method;
 import getFromApi.referentiels.tarifsLivraison.GetApi;
+import servlets.referentiels.tarifsLivraison.Formulaire;
 
 
 public class TarifLivraisonAction extends org.apache.struts.action.Action {
@@ -22,8 +23,11 @@ public class TarifLivraisonAction extends org.apache.struts.action.Action {
 	        GetApi objet = new GetApi();
 	        Withdrawal_method[] wms = objet.getWMs();
 	        String [] wmNames = objet.getWMNames();
+	        Withdrawal_method[] wmsByName = objet.getWMByNames();
 	        //formulaire.setWms(wms);
 	        request.setAttribute("wms", wms);
+	        request.setAttribute("wmNames", wmNames);
+	        request.setAttribute("wmsByNames", wmsByName);
 	        
 	        return mapping.findForward(SUCCESS);
 

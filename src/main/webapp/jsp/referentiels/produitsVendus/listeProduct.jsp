@@ -16,7 +16,7 @@
 			    <button id="search" class="btn btn-primary"
 				onclick="toggleRecherche()">Recherche un produit</button>
 				<button id="addProduct" class="btn btn-primary" data-toggle="modal"
-					data-target="#myModal" onclick="modalAjout()">Ajouter unproduit</button>
+					data-target="#myModal" onclick="modalAjout()">Ajouter un produit</button>
 					
 							<div id="divRecherche">
 								<div class="row">

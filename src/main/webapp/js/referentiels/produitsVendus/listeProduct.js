@@ -1,5 +1,33 @@
 $(document).ready(function(){
 	$('#listeLienNav')[0].children[2].setAttribute('class','active');
+	reload();
+	
+
+	var ptid = $('#findtype')[0];
+	$.ajax({
+		headers: { 
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		dataType : "json",
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/ProductType/tous',
+		type : 'GET',
+		crossDomain : true,
+		success : function(msg) {
+			console.log(msg);
+
+			if(ptid.options == null || ptid.options.length != msg.length){
+				ptid.options == null;
+				for(var i=0 ; i< msg.length ; i++){
+					var opt = new Option();
+					opt.value=msg[i].prodt_id;
+					opt.innerHTML=msg[i].prodt_id + "-" + msg[i].prodt_name;
+					ptid.appendChild(opt);
+				}	
+			}
+		}
+	});
+
 });
 
 function toggleRecherche() {
@@ -129,12 +157,12 @@ function reload(){
 				var divProd = 
 					'<div class="col-sm-4">'+
 					'	<div class="panel panel-primary">'+
-					'		<div class="panel-heading"><a class="lienColor" href="DetailProduct.do?prod='+msg[i].product_id+'">'+ msg[i].product_name +'</a></div>'+
+					'		<div class="panel-heading"><a class="lienColor" href="DetailProduct.do?prod='+msg[i].pid+'">'+ msg[i].pname +'</a></div>'+
 					'		<div class="panel-body">'+
 					'			<img src="https://placehold.it/150x80?text=IMAGE"'+
 					'			class="img-responsive" style="width: 100%" alt="Image">'+
 					'		</div>'+
-					'		<div class="panel-footer">Possibilité de voir emplacement précis du produit</div>'+
+					'		<div class="panel-footer">Possibilite de voir emplacement precis du produit</div>'+
 					'	</div>'+
 					'</div>';
 				console.log(divProd);
@@ -170,12 +198,12 @@ function findtype(){
 					var divProd = 
 						'<div class="col-sm-4">'+
 						'	<div class="panel panel-primary">'+
-						'		<div class="panel-heading"><a class="lienColor" href="DetailProduct.do?prod='+msg[i].product_id+'">'+ msg[i].product_name +'</a></div>'+
+						'		<div class="panel-heading"><a class="lienColor" href="DetailProduct.do?prod='+msg[i].pid+'">'+ msg[i].pname +'</a></div>'+
 						'		<div class="panel-body">'+
 						'			<img src="https://placehold.it/150x80?text=IMAGE"'+
 						'			class="img-responsive" style="width: 100%" alt="Image">'+
 						'		</div>'+
-						'		<div class="panel-footer">Possibilité de voir emplacement précis du produit</div>'+
+						'		<div class="panel-footer">Possibilite de voir emplacement precis du produit</div>'+
 						'	</div>'+
 						'</div>';
 					listproduct.innerHTML+=divProd;
@@ -214,12 +242,12 @@ function findname(){
 					var divProd = 
 						'<div class="col-sm-4">'+
 						'	<div class="panel panel-primary">'+
-						'		<div class="panel-heading"><a class="lienColor" href="DetailProduct.do?prod='+msg[i].product_id+'">'+ msg[i].product_name +'</a></div>'+
+						'		<div class="panel-heading"><a class="lienColor" href="DetailProduct.do?prod='+msg[i].pid+'">'+ msg[i].pname +'</a></div>'+
 						'		<div class="panel-body">'+
 						'			<img src="https://placehold.it/150x80?text=IMAGE"'+
 						'			class="img-responsive" style="width: 100%" alt="Image">'+
 						'		</div>'+
-						'		<div class="panel-footer">Possibilité de voir emplacement précis du produit</div>'+
+						'		<div class="panel-footer">Possibilite de voir emplacement precis du produit</div>'+
 						'	</div>'+
 						'</div>';
 					listproduct.innerHTML+=divProd;

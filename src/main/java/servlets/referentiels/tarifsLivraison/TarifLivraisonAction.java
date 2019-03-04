@@ -27,7 +27,9 @@ public class TarifLivraisonAction extends org.apache.struts.action.Action {
 	        //formulaire.setWms(wms);
 	        request.setAttribute("wms", wms);
 	        request.setAttribute("wmNames", wmNames);
-	        request.setAttribute("wmsByNames", wmsByName);*/
+
+	       /* request.setAttribute("wmsByNames", wmsByName)*/
+
 	        
 	        return mapping.findForward(SUCCESS);
 

@@ -61,7 +61,13 @@
 			<forward name="success"
 				path="/jsp/referentiels/produitsVendus/listeProduct.jsp" />
 		</action>
-
+		<action name="DetailProductActionForm" path="/DetailProduct"
+			scope="session"
+			type="servlets.referentiels.produitsVendus.DetailProductAction">
+			<forward name="success"
+				path="/jsp/referentiels/produitsVendus/detailProduct.jsp" />
+		</action>
+	
 		<!-- Profil -->
 		<action name="ProfilsActionForm" path="/Profil" scope="session"
 			type="servlets.referentiels.profils.ProfilsAction">

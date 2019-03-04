@@ -12,8 +12,7 @@
 				<li><a href="Product.do">Produits</a></li>
 				<li><a href="#">Parcours</a></li>
 				<li><a href="Profil.do">Profils</a></li>
-				<li><a href="tarifs_livraison.do">Livraison et méthodes de
-						paiement</a></li>
+				<li><a href="Administrateur.do">Administrateur</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span>Inscription</a></li>

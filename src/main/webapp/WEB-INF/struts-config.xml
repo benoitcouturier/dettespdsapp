@@ -112,7 +112,15 @@
 			scope="session" type="servlets.AccueilAction">
 			<forward name="success" path="/jsp/accueil.jsp" />
 		</action>
-
+		
+		<!-- Admin -->
+		<action name="Admin" path="/Administrateur"
+			scope="session"
+			type="servlets.referentiels.administrateur.administrateurAction">
+			<forward name="success"
+				path="/jsp/referentiels/administrateur/administrateur_page.jsp" />
+		</action>
+		
 	</action-mappings>
 
 	<controller

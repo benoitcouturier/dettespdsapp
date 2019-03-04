@@ -17,7 +17,7 @@ public class TarifLivraisonAction extends org.apache.struts.action.Action {
 	    public ActionForward execute(ActionMapping mapping,ActionForm form,
 	           HttpServletRequest request,HttpServletResponse response) throws Exception {
 
-	    	System.out.println("Passage à l'onglet tarifs livraison");
+	    	/*System.out.println("Passage à l'onglet tarifs livraison");
 	    	
 	    	Formulaire formulaire = (Formulaire) form;
 	        GetApiTarif objet = new GetApiTarif();
@@ -27,7 +27,7 @@ public class TarifLivraisonAction extends org.apache.struts.action.Action {
 	        //formulaire.setWms(wms);
 	        request.setAttribute("wms", wms);
 	        request.setAttribute("wmNames", wmNames);
-	        request.setAttribute("wmsByNames", wmsByName);
+	        request.setAttribute("wmsByNames", wmsByName);*/
 	        
 	        return mapping.findForward(SUCCESS);
 

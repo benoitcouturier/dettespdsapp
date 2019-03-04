@@ -94,6 +94,7 @@
 				path="/jsp/referentiels/client/client.jsp" />
 		</action>
 
+	
 		<!--Search client -->
 
 		<action name="SearchClientActionForm" path="/Admin"

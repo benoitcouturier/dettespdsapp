@@ -16,7 +16,7 @@
 						paiement</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span>Inscription</a></li>
+				<li><a href="Connexion.do"><span class="glyphicon glyphicon-user"></span>Inscription</a></li>
 				<li><a href="Connexion.do"><span
 						class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
 				<li><a href="Admin.do"><span

@@ -127,14 +127,14 @@ function determinationProfil() {
 		success : function(msg) {
 			console.log(msg);
 			divMockAchat.children[0].style.width="100%";
+			actualisation();
 		}
 	});
 }
 
-function determinationProfil() {
+function actualisation() {
 
-	var divMockAchat = $('#progressBar')[0];
-	divMockAchat.style.display = 'unset';
+	var tbody = $('#tbody')[0];
 	$.ajax({
 		// Type data
 		headers : {
@@ -152,13 +152,16 @@ function determinationProfil() {
 		// MSG IF success
 		success : function(msg) {
 			console.log(msg);
-			var str='<tr><td>'+msg.id_customer+'</td><td>'+msg.id_profil+'</td></tr>'
+			var str='<tr><td>'+msg.id_customer+'</td><td>'+msg.id_profil+'</td></tr>';
+			tbody.innerHTML = str;
 		}
 	});
 }
 
 
-
+$(document).ready(function(){
+	actualisation();
+});
 
 </script>
 

@@ -33,7 +33,8 @@ public class Profil {
     public void setAgeClient(int ageClient) {
         this.ageClient = ageClient;
     }
-
+    
+    public Profil() {}
     public String getSexClient() {
         return sexClient;
     }

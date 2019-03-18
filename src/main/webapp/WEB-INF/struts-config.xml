@@ -17,12 +17,15 @@
 			type="servlets.referentiels.profils.ProfilsActionForm" />
 		<form-bean name="ProductActionForm"
 			type="servlets.referentiels.produitsVendus.ProductActionForm" />
-		<form-bean name="DetailProductActionForm"
-			type="servlets.referentiels.produitsVendus.DetailProductActionForm" />
 		<form-bean name="ClientActionForm"
 			type="servlets.referentiels.client.ClientActionForm" />
 		<form-bean name="SearchClientActionForm"
 			type="servlets.referentiels.client.SearchClientActionForm" />
+		<form-bean name="FormulaireCampagne"
+			type="servlets.referentiels.campagne.FormulaireCampagne" />
+					<form-bean name="DetailProductActionForm"
+			type="servlets.referentiels.produitsVendus.DetailProductActionForm" />
+	
 
 	</form-beans>
 
@@ -65,7 +68,8 @@
 			<forward name="success"
 				path="/jsp/referentiels/produitsVendus/listeProduct.jsp" />
 		</action>
-		<action name="DetailProductActionForm" path="/DetailProduct"
+		
+				<action name="DetailProductActionForm" path="/DetailProduct"
 			scope="session"
 			type="servlets.referentiels.produitsVendus.DetailProductAction">
 			<forward name="success"
@@ -122,12 +126,12 @@
 			<forward name="success" path="/jsp/accueil.jsp" />
 		</action>
 		
-		<!-- Admin -->
-		<action name="Admin" path="/Administrateur"
+		<!-- Evenementiel -->
+		<action name="Evenementiel" path="/Evenementiel"
 			scope="session"
-			type="servlets.referentiels.administrateur.administrateurAction">
+			type="servlets.referentiels.campagne.CampagneAction">
 			<forward name="success"
-				path="/jsp/referentiels/administrateur/administrateur_page.jsp" />
+				path="/jsp/referentiels/campagne/evenementiel_page.jsp"></forward>
 		</action>
 		
 	</action-mappings>

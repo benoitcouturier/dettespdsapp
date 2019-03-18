@@ -6,7 +6,6 @@ public class Product {
 	private int pid,pqte,sid,psid,ptid;
 	private float price;
 	
-    
 	public String getDepartement() {
 		return departement;
 	}
@@ -22,7 +21,7 @@ public class Product {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-
+	public Product() {}
 	public String getPname() {
 		return pname;
 	}

@@ -152,7 +152,11 @@ function actualisation() {
 		// MSG IF success
 		success : function(msg) {
 			console.log(msg);
-			var str='<tr><td>'+msg.id_customer+'</td><td>'+msg.id_profil+'</td></tr>';
+			var str = '';
+			for(var i = 0; i< msg.length; i++){
+				str +='<tr><td>'+msg[i].id_customer+'</td><td>'+msg[i].id_profil+'</td></tr>';
+			}
+			
 			tbody.innerHTML = str;
 		}
 	});

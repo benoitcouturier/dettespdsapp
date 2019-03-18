@@ -8,8 +8,8 @@ $(document).ready(function(){
 			'Content-Type': 'application/json'
 		},
 		dataType : "json",
-		//url : 'http://192.168.20.3:8080/ApiRest/RestGT/Product/find/'+parseInt(pid),
-		url : 'http://localhost:8080/ApiRest/RestGT/Product/find/'+parseInt(pid),
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Product/find/'+parseInt(pid),
+		//url : 'http://localhost:8080/ApiRest/RestGT/Product/find/'+parseInt(pid),
 		type : 'GET',
 		crossDomain : true,
 		success : function(msg) {
@@ -31,8 +31,8 @@ $(document).ready(function(){
 					'Content-Type': 'application/json'
 				},
 				dataType : "json",
-				//url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/find/'+mid,
-				url : 'http://localhost:8080/ApiRest/RestGT/Magasin/find/'+mid,
+				url : 'http://192.168.20.3:8080/ApiRest/RestGT/Magasin/find/'+mid,
+				//url : 'http://localhost:8080/ApiRest/RestGT/Magasin/find/'+mid,
 				type : 'GET',
 				crossDomain : true,
 				success : function(msg) {
@@ -50,8 +50,8 @@ $(document).ready(function(){
 							'Content-Type': 'application/json'
 						},
 						dataType : "json",
-						//url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/find/'+emplacement,
-						url : 'http://localhost:8080/ApiRest/RestGT/Emplacement/find/'+emplacement,
+						url : 'http://192.168.20.3:8080/ApiRest/RestGT/Emplacement/find/'+emplacement,
+						//url : 'http://localhost:8080/ApiRest/RestGT/Emplacement/find/'+emplacement,
 						type : 'GET',
 						crossDomain : true,
 						success : function(msg) {

@@ -47,7 +47,13 @@
 			</div>
 
 			<div class="col-lg-3">
-				<button class="btn btn-primary" onclick="determinationProfil()">Insert Profil</button>
+				<button class="btn btn-primary" onclick="determinationProfil()">Insertion profils de base</button>
+				<br>
+				
+			</div>
+			
+			<div class="col-lg-3">
+				<button class="btn btn-primary" onclick="determinationProfilAchats()">Insertion Profils en fonction des achats</button>
 				<br>
 				<div class="progress" id="progressBar" style="display : none;">
 					<div class="progress-bar" role="progressbar" aria-valuenow="0"
@@ -55,7 +61,13 @@
 				</div>
 			</div>
 			
-			<div class="col-lg-3">
+			
+
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				Utilisateur sans profils :
 				<table class="table table-striped">
 				  <thead>
 				    <tr>
@@ -70,9 +82,8 @@
 				    
 				  </tbody>
 				</table>
-			
 			</div>
-
+		
 		</div>
 
 	</div>
@@ -110,8 +121,6 @@ function mockAchats() {
 	
 function determinationProfil() {
 
-	var divMockAchat = $('#progressBar')[0];
-	divMockAchat.style.display = 'unset';
 	$.ajax({
 		// Type data
 		headers : {
@@ -123,6 +132,31 @@ function determinationProfil() {
 
 		// url API
 		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Profil/determinationProfil',
+
+		// Type method : POST PUT GET
+		type : 'GET',
+
+		// MSG IF success
+		success : function(msg) {
+			actualisation();
+		}
+	});
+	actualisation();
+}
+
+function determinationProfilAchats() {
+
+	$.ajax({
+		// Type data
+		headers : {
+			'Accept' : 'application/json',
+			'Content-Type' : 'application/json'
+		},
+		async : false,
+		dataType : 'json',
+
+		// url API
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Profil/determinationProfilAchats',
 
 		// Type method : POST PUT GET
 		type : 'GET',

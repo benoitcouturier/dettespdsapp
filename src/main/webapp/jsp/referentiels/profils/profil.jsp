@@ -115,6 +115,7 @@ function determinationProfil() {
 			'Accept' : 'application/json',
 			'Content-Type' : 'application/json'
 		},
+		async : false,
 		dataType : 'json',
 
 		// url API
@@ -125,11 +126,10 @@ function determinationProfil() {
 
 		// MSG IF success
 		success : function(msg) {
-			console.log(msg);
-			divMockAchat.children[0].style.width="100%";
 			actualisation();
 		}
 	});
+	actualisation();
 }
 
 function actualisation() {

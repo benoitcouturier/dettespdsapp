@@ -54,6 +54,21 @@
 						aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
 				</div>
 			</div>
+			
+			<div class="col-lg-3">
+				<table class="table table-striped">
+				  <thead>
+				    <tr>
+				      <th scope="col">CustomerID</th>
+				      <th scope="col">Profil</th>
+				    </tr>
+				  </thead>
+				  <tbody id="tbody">
+				    
+				  </tbody>
+				</table>
+			
+			</div>
 
 		</div>
 
@@ -115,6 +130,34 @@ function determinationProfil() {
 		}
 	});
 }
+
+function determinationProfil() {
+
+	var divMockAchat = $('#progressBar')[0];
+	divMockAchat.style.display = 'unset';
+	$.ajax({
+		// Type data
+		headers : {
+			'Accept' : 'application/json',
+			'Content-Type' : 'application/json'
+		},
+		dataType : 'json',
+
+		// url API
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Profil/getClientProfil',
+
+		// Type method : POST PUT GET
+		type : 'GET',
+
+		// MSG IF success
+		success : function(msg) {
+			console.log(msg);
+			str='<tr><td>'+msg.+'</td><td>'+msg.idProfil+'</td></tr>'
+		}
+	});
+}
+
+
 
 
 </script>

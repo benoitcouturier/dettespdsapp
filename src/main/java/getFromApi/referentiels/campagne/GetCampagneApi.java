@@ -1,4 +1,4 @@
-package getFromApi.referentiels.magasins;
+package getFromApi.referentiels.campagne;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,17 +10,17 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import Entites.referentiels.magasins.Magasin;
+import Entites.referentiels.campagne.Campaign;
 
-public class GetMagasinApi {
+public class GetCampagneApi {
 
-	public Magasin[] get() {
+	public Campaign[] get() {
 
 		try {
 
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(
-					"http://192.168.20.3:8080/ApiRest/RestGT/Magasin/tous");
+					"http://192.168.20.3:8080/ApiRest/RestGT/Campagne/tous");
 			getRequest.addHeader("accept", "application/json");
 
 			HttpResponse response = httpClient.execute(getRequest);
@@ -42,7 +42,7 @@ public class GetMagasinApi {
 			}
 			
 			ObjectMapper mapper = new ObjectMapper();
-			Magasin[] p = mapper.readValue(resp, Magasin[].class);
+			Campaign[] p = mapper.readValue(resp, Campaign[].class);
 			if (p != null) {
 				System.out.println(p.length);
 			}
@@ -65,13 +65,12 @@ public class GetMagasinApi {
 			
 	}
 	
-	public Magasin find(int id) {
-		
+	public void createCampaign() {
 
 		try {
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(
-					"http://localhost:8080/ApiRest/RestGT/Magasin/find/"+id);
+					"http://192.168.20.3:8080/ApiRest/RestGT/Campagne/create");
 			getRequest.addHeader("accept", "application/json");
 
 			HttpResponse response = httpClient.execute(getRequest);
@@ -80,27 +79,19 @@ public class GetMagasinApi {
 				throw new RuntimeException("Failed : HTTP error code : "
 						+ response.getStatusLine().getStatusCode());
 			}
-
-			BufferedReader br = new BufferedReader(
-					new InputStreamReader((response.getEntity().getContent())));
-
-			String output;
-			String resp = new String();
-			System.out.println("Output from Server .... \n");
-			while ((output = br.readLine()) != null) {
-				System.out.println(output);
-				resp = resp+output;
-			}
-			ObjectMapper mapper = new ObjectMapper();
-			Magasin p = mapper.readValue(resp, Magasin.class);
+			
 			httpClient.getConnectionManager().shutdown();
-			return p;
+			System.out.println("Ajout réussi");
+
 			
 		} catch (ClientProtocolException e) {
+
 			e.printStackTrace();
+
 		} catch (IOException e) {
+
 			e.printStackTrace();
 		}
-		return null;
+			
 	}
 }

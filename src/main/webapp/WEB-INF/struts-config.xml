@@ -23,8 +23,8 @@
 			type="servlets.referentiels.client.SearchClientActionForm" />
 		<form-bean name="FormulaireCampagne"
 			type="servlets.referentiels.campagne.FormulaireCampagne" />
-					<form-bean name="DetailProductActionForm"
-			type="servlets.referentiels.produitsVendus.DetailProductActionForm" />
+		<form-bean name="DetailProductActionForm"
+		type="servlets.referentiels.produitsVendus.DetailProductActionForm" />
 	
 
 	</form-beans>
@@ -125,7 +125,7 @@
 			scope="session" type="servlets.AccueilAction">
 			<forward name="success" path="/jsp/accueil.jsp" />
 		</action>
-		
+				
 		<!-- Evenementiel -->
 		<action name="Evenementiel" path="/Evenementiel"
 			scope="session"

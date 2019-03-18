@@ -72,7 +72,7 @@ public class GetApiProduct {
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(
 					//"http://192.168.20.3:8080/ApiRest/RestGT/Product/find/"+id);
-					"http://localhost:8080/ApiRest/RestGT/Product/find/"+id);
+					"http://192.168.20.3:8080/ApiRest/RestGT/Product/find/"+id);
 			getRequest.addHeader("accept", "application/json");
 
 			HttpResponse response = httpClient.execute(getRequest);

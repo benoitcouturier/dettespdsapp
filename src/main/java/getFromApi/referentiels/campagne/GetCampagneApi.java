@@ -20,7 +20,7 @@ public class GetCampagneApi {
 
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(
-					"http://localhost:8080/ApiRest/RestGT/Campagne/tous");
+					"http://192.168.20.3:8080/ApiRest/RestGT/Campagne/tous");
 			getRequest.addHeader("accept", "application/json");
 
 			HttpResponse response = httpClient.execute(getRequest);
@@ -70,7 +70,7 @@ public class GetCampagneApi {
 		try {
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpGet getRequest = new HttpGet(
-					"http://localhost:8080/ApiRest/RestGT/Campagne/create");
+					"http://192.168.20.3:8080/ApiRest/RestGT/Campagne/create");
 			getRequest.addHeader("accept", "application/json");
 
 			HttpResponse response = httpClient.execute(getRequest);

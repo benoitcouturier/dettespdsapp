@@ -42,7 +42,7 @@
 
 					<div class="form-group">
 						<label for="event_type">Type d'évènement</label> <select
-							class="form-control">
+							class="form-control" id="event_type">
 							<option value="particulier">Particulier</option>
 							<option value="general">General</option>
 							<option value="promotion">Promotion</option>
@@ -52,7 +52,7 @@
 					<div class="form-group">
 						<label for="event_startdate">Date début de l'évènement</label>
 						<div class='input-group date date-debut'>
-							<input type='text' class="form-control" required /> <span
+							<input type='text' class="form-control" required id="event_startdate"/> <span
 								class="input-group-addon"><span
 								class="glyphicon glyphicon-calendar"></span> </span>
 						</div>
@@ -61,7 +61,7 @@
 					<div class="form-group">
 						<label for="event_enddate">Date fin de l'évènement</label>
 						<div class='input-group date date-fin'>
-							<input type='text' class="form-control" required /> <span
+							<input type='text' class="form-control" required id="event_enddate"/> <span
 								class="input-group-addon"><span
 								class="glyphicon glyphicon-calendar"></span> </span>
 						</div>
@@ -104,7 +104,7 @@
 						</select>
 					</div>
 
-					<button onclick="formulaireCampagne()" class="btn btn-primary">Enregistrer</button>
+					<a  onclick="formulaireCampagne()" class="btn btn-primary">Enregistrer</a>
 
 				</div>
 			</div>
@@ -133,7 +133,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${campagne}" var="i">
+							<c:forEach items="${requestScope['campagne']}"  var="i">
 								<tr>
 									<td scope="row">${i.idCampaign}</td>
 									<td>${i.nameCampaign}</td>

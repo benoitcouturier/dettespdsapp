@@ -100,7 +100,7 @@ function formulaireCampagne() {
 		dataType : 'json',
 
 		// url API
-		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Campagne/create',
+		url : 'http://localhost:8080/ApiRest/RestGT/Campagne/create',
 
 		// Type method : POST PUT GET
 		type : 'POST',
@@ -111,12 +111,13 @@ function formulaireCampagne() {
 		// MSG IF success
 		success : function(msg) {
 			console.log(msg);
-			//$("#success_modal").modal("show");
-			location.reload();
+			
 
 		}
 	});
 
 }
 
+//$("#success_modal").modal("show");
+//location.reload();
 

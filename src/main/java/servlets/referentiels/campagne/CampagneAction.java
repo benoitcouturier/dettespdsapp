@@ -30,9 +30,9 @@ public class CampagneAction extends org.apache.struts.action.Action {
 	        Product[] produit = objet.get();
 	        request.setAttribute("produit", produit);
 	        
-	        /*GetCampagneApi campagneApi = new GetCampagneApi();
+	        GetCampagneApi campagneApi = new GetCampagneApi();
 	        Campaign[] campagne = campagneApi.get();
-	        request.setAttribute("campagne", campagne);*/
+	        request.setAttribute("campagne", campagne);
 	        
 	        return mapping.findForward(SUCCESS);
 

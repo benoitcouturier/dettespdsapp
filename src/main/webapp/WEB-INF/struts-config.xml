@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!DOCTYPE struts-config PUBLIC
@@ -18,8 +17,12 @@
 			type="servlets.referentiels.profils.ProfilsActionForm" />
 		<form-bean name="ProductActionForm"
 			type="servlets.referentiels.produitsVendus.ProductActionForm" />
+		<form-bean name="DetailProductActionForm"
+			type="servlets.referentiels.produitsVendus.DetailProductActionForm" />
 		<form-bean name="ClientActionForm"
 			type="servlets.referentiels.client.ClientActionForm" />
+		<form-bean name="SearchClientActionForm"
+			type="servlets.referentiels.client.SearchClientActionForm" />
 
 	</form-beans>
 
@@ -68,7 +71,7 @@
 			<forward name="success"
 				path="/jsp/referentiels/produitsVendus/detailProduct.jsp" />
 		</action>
-	
+
 		<!-- Profil -->
 		<action name="ProfilsActionForm" path="/Profil" scope="session"
 			type="servlets.referentiels.profils.ProfilsAction">
@@ -99,6 +102,17 @@
 				path="/jsp/referentiels/client/client.jsp" />
 		</action>
 
+	
+		<!--Search client -->
+
+		<action name="SearchClientActionForm" path="/Admin"
+			scope="session" type="servlets.referentiels.client.SearchClientAction">
+			<forward name="success"
+				path="/jsp/referentiels/client/searchClient.jsp" />
+		</action>
+		
+		<!--  -->
+		
 		<action name="Formulaire" path="/FormTarifs" scope="session"
 			type="servlets.referentiels.tarifsLivraison.FormulaireAction">
 			<forward name="success" path="/jsp/test.jsp" />
@@ -107,7 +121,15 @@
 			scope="session" type="servlets.AccueilAction">
 			<forward name="success" path="/jsp/accueil.jsp" />
 		</action>
-
+		
+		<!-- Admin -->
+		<action name="Admin" path="/Administrateur"
+			scope="session"
+			type="servlets.referentiels.administrateur.administrateurAction">
+			<forward name="success"
+				path="/jsp/referentiels/administrateur/administrateur_page.jsp" />
+		</action>
+		
 	</action-mappings>
 
 	<controller

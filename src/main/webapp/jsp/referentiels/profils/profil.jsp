@@ -60,7 +60,10 @@
 				  <thead>
 				    <tr>
 				      <th scope="col">CustomerID</th>
+				      <th scope="col">Sexe Customer</th>
 				      <th scope="col">Profil</th>
+				      <th scope="col">Nom du Profil</th>
+				      
 				    </tr>
 				  </thead>
 				  <tbody id="tbody">
@@ -154,7 +157,7 @@ function actualisation() {
 			console.log(msg);
 			var str = '';
 			for(var i = 0; i< msg.length; i++){
-				str +='<tr><td>'+msg[i].id_customer+'</td><td>'+msg[i].id_profil+'</td></tr>';
+				str +='<tr><td>'+msg[i].id_customer+'</td><td>'+msg[i].customer_sex+'</td><td>'+msg[i].id_profil+'</td><td>'+msg[i].customer_preferences+'</td></tr>';
 			}
 			
 			tbody.innerHTML = str;

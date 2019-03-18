@@ -11,6 +11,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import Entites.referentiels.campagne.Campaign;
+import Entites.referentiels.profils.Profil;
 
 public class GetCampagneApi {
 
@@ -43,6 +44,57 @@ public class GetCampagneApi {
 			
 			ObjectMapper mapper = new ObjectMapper();
 			Campaign[] p = mapper.readValue(resp, Campaign[].class);
+			if (p != null) {
+				System.out.println(p.length);
+			}
+			
+			
+			httpClient.getConnectionManager().shutdown();
+
+
+			return p;
+			
+		} catch (ClientProtocolException e) {
+
+			e.printStackTrace();
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		return null;
+			
+	}
+	
+	public Profil[] getProfilType() {
+
+		try {
+
+			DefaultHttpClient httpClient = new DefaultHttpClient();
+			HttpGet getRequest = new HttpGet(
+					"http://localhost:8080/ApiRest/RestGT/Profil/tous");
+			getRequest.addHeader("accept", "application/json");
+
+			HttpResponse response = httpClient.execute(getRequest);
+
+			if (response.getStatusLine().getStatusCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : "
+						+ response.getStatusLine().getStatusCode());
+			}
+
+			BufferedReader br = new BufferedReader(
+					new InputStreamReader((response.getEntity().getContent())));
+
+			String output;
+			String resp = new String();
+			System.out.println("Output from Server .... \n");
+			while ((output = br.readLine()) != null) {
+				System.out.println(output);
+				resp = resp+output;
+			}
+			
+			ObjectMapper mapper = new ObjectMapper();
+			Profil[] p = mapper.readValue(resp, Profil[].class);
 			if (p != null) {
 				System.out.println(p.length);
 			}

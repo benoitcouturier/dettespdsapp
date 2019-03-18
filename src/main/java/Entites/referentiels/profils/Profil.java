@@ -57,16 +57,57 @@ public class Profil {
     private int ageClient;
     private String sexClient;
     private int purchaseVolume;
+    
+    private int numProfil;
+    private String nomProfil,sexeClient,ageRange,purshaseFrequency,commandType;
+	
+    public int getNumProfil() {
+		return numProfil;
+	}
 
+	public void setNumProfil(int numProfil) {
+		this.numProfil = numProfil;
+	}
 
-    public Profil(int profilT_id, String profilT_name, String product_Type, int ageClient, String sexClient, int purchaseVolume) {
-        this.profilT_id = profilT_id;
-        this.profilT_name = profilT_name;
-        this.product_Type = product_Type;
-        this.ageClient = ageClient;
-        this.sexClient = sexClient;
-        this.purchaseVolume = purchaseVolume;
-    }
+	public String getNomProfil() {
+		return nomProfil;
+	}
+
+	public void setNomProfil(String nomProfil) {
+		this.nomProfil = nomProfil;
+	}
+
+	public String getSexeClient() {
+		return sexeClient;
+	}
+
+	public void setSexeClient(String sexeClient) {
+		this.sexeClient = sexeClient;
+	}
+
+	public String getAgeRange() {
+		return ageRange;
+	}
+
+	public void setAgeRange(String ageRange) {
+		this.ageRange = ageRange;
+	}
+
+	public String getPurshaseFrequency() {
+		return purshaseFrequency;
+	}
+
+	public void setPurshaseFrequency(String purshaseFrequency) {
+		this.purshaseFrequency = purshaseFrequency;
+	}
+
+	public String getCommandType() {
+		return commandType;
+	}
+
+	public void setCommandType(String commandType) {
+		this.commandType = commandType;
+	}
 
 }
 

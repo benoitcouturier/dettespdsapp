@@ -7,6 +7,7 @@ import org.apache.struts.action.*;
 import Entites.referentiels.campagne.Campaign;
 import Entites.referentiels.magasins.Magasin;
 import Entites.referentiels.produitsVendus.Product;
+import Entites.referentiels.profils.Profil;
 import getFromApi.referentiels.campagne.GetCampagneApi;
 import getFromApi.referentiels.magasins.GetMagasinApi;
 import getFromApi.referentiels.produitsVendus.GetApiProduct;
@@ -33,6 +34,9 @@ public class CampagneAction extends org.apache.struts.action.Action {
 	        GetCampagneApi campagneApi = new GetCampagneApi();
 	        Campaign[] campagne = campagneApi.get();
 	        request.setAttribute("campagne", campagne);
+	        
+	        Profil[] profilType = campagneApi.getProfilType();
+	        request.setAttribute("profilType", profilType);
 	        
 	        return mapping.findForward(SUCCESS);
 

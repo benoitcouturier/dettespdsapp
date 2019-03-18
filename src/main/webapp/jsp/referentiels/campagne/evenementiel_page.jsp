@@ -97,9 +97,9 @@
 							<option value="13">Jeune homme</option>
 							<option value="14">Sportif</option>
 
-							<!-- <c:forEach items="${requestScope['profileType']}" var="i">
-						<option value="${i.idProfileType}">${i.profileName}</option>
-						</c:forEach> -->
+							<c:forEach items="${requestScope['profileType']}" var="i">
+								<option value="${i.numProfil}">${i.nomProfil}</option>
+							</c:forEach>
 
 						</select>
 					</div>

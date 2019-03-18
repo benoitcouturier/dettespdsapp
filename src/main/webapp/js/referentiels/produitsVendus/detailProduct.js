@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#listeLienNav')[0].children[1].setAttribute('class','active');
+	$('#listeLienNav')[0].children[2].setAttribute('class','active');
 
 	var pid = $('#pid')[0].innerHTML;
 	$.ajax({

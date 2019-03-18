@@ -67,7 +67,7 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				Utilisateur sans profils :
+				<span id="text">Utilisateur sans profils :</span>
 				<table class="table table-striped">
 				  <thead>
 				    <tr>
@@ -139,6 +139,7 @@ function determinationProfil() {
 		// MSG IF success
 		success : function(msg) {
 			actualisation();
+			$('#text')[0].innerHTML = 'Utilisateurs modifiés :';
 		}
 	});
 	actualisation();

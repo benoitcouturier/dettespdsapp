@@ -93,11 +93,11 @@
 							ciblé(s)</label> <select class="ui fluid search dropdown"
 							id="event_listProfileType" multiple>
 							<option value="0" class="option-all">Tous</option>
-							<option value="12">Jeune femme</option>
+							<!-- <option value="12">Jeune femme</option>
 							<option value="13">Jeune homme</option>
-							<option value="14">Sportif</option>
+							<option value="14">Sportif</option> -->
 
-							<c:forEach items="${requestScope['profileType']}" var="i">
+							<c:forEach items="${requestScope['profilType']}" var="i">
 								<option value="${i.numProfil}">${i.nomProfil}</option>
 							</c:forEach>
 

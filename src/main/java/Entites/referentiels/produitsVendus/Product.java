@@ -21,7 +21,7 @@ public class Product {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-
+	public Product() {}
 	public String getPname() {
 		return pname;
 	}

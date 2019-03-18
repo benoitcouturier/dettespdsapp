@@ -14,6 +14,8 @@ public class Magasin {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public Magasin() {}
 	public String getNom() {
 		return nom;
 	}
@@ -37,6 +39,18 @@ public class Magasin {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public Magasin(int id, String nom, int idEmplacement, int idType, String description) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.idEmplacement = idEmplacement;
+		this.idType = idType;
+		this.description = description;
+	}
+	public Magasin(int id) {
+		super();
+		this.id = id;
 	}
 	
 }

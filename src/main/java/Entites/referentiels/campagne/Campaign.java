@@ -66,9 +66,7 @@ public class Campaign {
 	public void setListProduct(ArrayList<Product> listProduct) {
 		this.listProduct = listProduct;
 	}
-	public Campaign() {
-		super();
-	}
+	public Campaign() { }
 	public Campaign(int idCampaign, String nameCampaign, String typeCampaign, Date startdateCampaign,
 			Date enddateCampaign) {
 		super();

@@ -18,6 +18,10 @@ public class Campaign {
 	private ArrayList <Profil> listProfil;
 	private ArrayList <Product> listProduct;
 	
+	private ArrayList <Integer> listMagasinId;
+	private ArrayList <Integer> listProfilId;
+	private ArrayList <Integer> listProductId;
+	
 	public int getIdCampaign() {
 		return idCampaign;
 	}
@@ -86,6 +90,24 @@ public class Campaign {
 		this.listMagasin = listMagasin;
 		this.listProfil = listProfil;
 		this.listProduct = listProduct;
+	}
+	public ArrayList<Integer> getListMagasinId() {
+		return listMagasinId;
+	}
+	public void setListMagasinId(ArrayList<Integer> listMagasinId) {
+		this.listMagasinId = listMagasinId;
+	}
+	public ArrayList<Integer> getListProfilId() {
+		return listProfilId;
+	}
+	public void setListProfilId(ArrayList<Integer> listProfilId) {
+		this.listProfilId = listProfilId;
+	}
+	public ArrayList<Integer> getListProductId() {
+		return listProductId;
+	}
+	public void setListProductId(ArrayList<Integer> listProductId) {
+		this.listProductId = listProductId;
 	}
 	
 }

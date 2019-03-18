@@ -52,8 +52,8 @@
 					<div class="form-group">
 						<label for="event_startdate">Date début de l'évènement</label>
 						<div class='input-group date date-debut'>
-							<input type='text' class="form-control" required id="event_startdate"/> <span
-								class="input-group-addon"><span
+							<input type='text' class="form-control" required
+								id="event_startdate" /> <span class="input-group-addon"><span
 								class="glyphicon glyphicon-calendar"></span> </span>
 						</div>
 					</div>
@@ -61,8 +61,8 @@
 					<div class="form-group">
 						<label for="event_enddate">Date fin de l'évènement</label>
 						<div class='input-group date date-fin'>
-							<input type='text' class="form-control" required id="event_enddate"/> <span
-								class="input-group-addon"><span
+							<input type='text' class="form-control" required
+								id="event_enddate" /> <span class="input-group-addon"><span
 								class="glyphicon glyphicon-calendar"></span> </span>
 						</div>
 					</div>
@@ -104,7 +104,7 @@
 						</select>
 					</div>
 
-					<a  onclick="formulaireCampagne()" class="btn btn-primary">Enregistrer</a>
+					<a onclick="formulaireCampagne()" class="btn btn-primary">Enregistrer</a>
 
 				</div>
 			</div>
@@ -130,16 +130,31 @@
 								<th scope="col">Type</th>
 								<th scope="col">Date de début</th>
 								<th scope="col">Date de fin</th>
+								<th scope="col">Magasins</th>
+								<th scope="col">Produits</th>
+								<th scope="col">Type de profils</th>
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${requestScope['campagne']}"  var="i">
+							<c:forEach items="${requestScope['campagne']}" var="i">
 								<tr>
 									<td scope="row">${i.idCampaign}</td>
 									<td>${i.nameCampaign}</td>
 									<td>${i.typeCampaign}</td>
 									<td>${i.startdateCampaign}</td>
 									<td>${i.enddateCampaign}</td>
+									<c:choose>
+										<c:when test="${i.typeCampaign == 'general'}">
+											<td>TOUS</td>
+											<td>TOUS</td>
+											<td>TOUS</td>
+										</c:when>
+										<c:otherwise>
+										<td></td>
+										<td></td>
+										<td></td>
+										</c:otherwise>
+									</c:choose>
 								</tr>
 							</c:forEach>
 						</tbody>

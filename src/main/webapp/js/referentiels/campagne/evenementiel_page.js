@@ -83,13 +83,23 @@ function formulaireCampagne() {
 	var event_listProfileType = $('#event_listProfileType').val();
 
 	var obj = new Object();
+	var listeMagasin = new Object();
+	var listeProfil = new Object();
+	var listeProduct = new Object();
+	
 	obj.nameCampaign = event_name;
 	obj.typeCampaign = event_type;
 	obj.startdateCampaign = event_startdate;
 	obj.enddateCampaign = event_enddate;
-	obj.listMagasin = event_listStore;
-	obj.listProfil = event_listProfileType;
-	obj.listProduct = event_listProduct;
+	
+	listeMagasin = event_listStore;
+	obj.listMagasinId = listeMagasin;
+	
+	listeProfil= event_listProfileType;
+	obj.listProfilId = listeProfil;
+	
+	listeProduct = event_listProduct;
+	obj.listProductId = listeProduct;
 
 	$.ajax({
 		// Type data

@@ -42,30 +42,16 @@
 		<div class="row">
 
 			<div class="col-lg-3">
-				<button class="btn btn-primary" onclick="mockUser()">Mock
-					Compte Client</button>
-				<br>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="0"
-						aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3">
 				<button class="btn btn-primary" onclick="mockAchats()">Mock	Achats</button>
 				<br>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="0"
-						aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
-				</div>
 			</div>
 
 			<div class="col-lg-3">
-				<button class="btn btn-primary" onclick="insertionProfils()">Insert Profile</button>
+				<button class="btn btn-primary" onclick="determinationProfil()">Insert Profil</button>
 				<br>
-				<div class="progress">
+				<div class="progress" id="progressBar" style="display : none;">
 					<div class="progress-bar" role="progressbar" aria-valuenow="0"
-						aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
+						aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
 				</div>
 			</div>
 
@@ -79,7 +65,7 @@
 
 <script>
 
-function mockUser() {
+function mockAchats() {
 
 
 		$.ajax({
@@ -91,13 +77,10 @@ function mockUser() {
 			dataType : 'json',
 
 			// url API
-			url : 'http://192.168.20.3:8080/ApiRest/RestGT/Profil/mockUser',
+			url : 'http://192.168.20.3:8080/ApiRest/RestGT/Profil/mockAchats',
 
 			// Type method : POST PUT GET
-			type : 'POST',
-
-			// parse Object to JSON
-			data : JSON.stringify(obj),
+			type : 'GET',
 
 			// MSG IF success
 			success : function(msg) {
@@ -106,6 +89,33 @@ function mockUser() {
 			}
 		});
 	}
+	
+function determinationProfil() {
+
+	var divMockAchat = $('#progressBar')[0];
+	divMockAchat.style.display = 'unset';
+	$.ajax({
+		// Type data
+		headers : {
+			'Accept' : 'application/json',
+			'Content-Type' : 'application/json'
+		},
+		dataType : 'json',
+
+		// url API
+		url : 'http://192.168.20.3:8080/ApiRest/RestGT/Profil/determinationProfil',
+
+		// Type method : POST PUT GET
+		type : 'GET',
+
+		// MSG IF success
+		success : function(msg) {
+			console.log(msg);
+			divMockAchat.children[0].style.width="100%";
+		}
+	});
+}
+
 
 </script>
 

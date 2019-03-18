@@ -14,7 +14,7 @@ public class ProfilsAction extends org.apache.struts.action.Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form,
                                  HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        System.out.println("Action TestStruts");
+       /* R1 System.out.println("Action TestStruts");
         ProfilsActionForm profilsForm = (ProfilsActionForm) form;
         GetApiProfils objet = new GetApiProfils();
 
@@ -22,7 +22,7 @@ public class ProfilsAction extends org.apache.struts.action.Action {
             String name = profilsForm.getName();
             System.out.println(name);
             request.setAttribute("name", name);
-        }
+        }*/
 
         return mapping.findForward(SUCCESS);
 

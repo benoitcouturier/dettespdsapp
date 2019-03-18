@@ -9,6 +9,7 @@ public class Formulaire extends org.apache.struts.action.ActionForm {
 	private String message;
 	private Withdrawal_method wm;
 	private Withdrawal_method[] wms;
+	private String[] wmNames;
 	
 
 	public Formulaire() {
@@ -40,6 +41,14 @@ public class Formulaire extends org.apache.struts.action.ActionForm {
 
 	public void setWms(Withdrawal_method[] wms) {
 		this.wms = wms;
+	}
+
+	public String[] getWmNames() {
+		return wmNames;
+	}
+
+	public void setWmNames(String[] wmNames) {
+		this.wmNames = wmNames;
 	}
 
 }

@@ -152,7 +152,7 @@ function determinationProfil() {
 		// MSG IF success
 		success : function(msg) {
 			console.log(msg);
-			str='<tr><td>'+msg.+'</td><td>'+msg.idProfil+'</td></tr>'
+			var str='<tr><td>'+msg.id_customer+'</td><td>'+msg.id_profil+'</td></tr>'
 		}
 	});
 }

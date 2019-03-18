@@ -19,6 +19,9 @@ $(document).ready(function(){
 			
 			var output = $('#pname')[0];
 			output.innerHTML = msg.pname;
+			
+			var price = $('#price')[0];
+			price.innerHTML = msg.price;
 
 			$('#id')[0].innerHTML=msg.sid;
 

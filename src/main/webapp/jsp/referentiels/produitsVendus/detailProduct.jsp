@@ -22,6 +22,7 @@
 							<th scope="col">Nom du magasin</th>
 							<th scope="col">Emplacement magasin</th>
 							<th scope="col">Emplacement précis dans le magasin</th>
+							<th scope="col">Prix</th>
 						</tr>
 					</thead>
 										<tbody>
@@ -30,6 +31,7 @@
 								<td id="store"></td>
 								<td id="emplacement"></td>
 								<td id="departement"></td>
+								<td id="price"></td>
 							</tr>
 					</tbody>
 				</table>

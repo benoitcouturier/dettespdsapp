@@ -50,6 +50,7 @@ function modalAjout() {
 	qte.value='';
 	sid.value='';
 	psid.value='';
+	departement.value='';
 	$.ajax({
 		headers: { 
 			'Accept': 'application/json',

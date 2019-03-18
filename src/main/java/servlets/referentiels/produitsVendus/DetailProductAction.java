@@ -9,6 +9,8 @@ import org.apache.struts.action.ActionMapping;
 
 import Entites.referentiels.produitsVendus.Product;
 import getFromApi.referentiels.produitsVendus.GetApiProduct;
+import Entites.referentiels.magasins.Magasin;
+import getFromApi.referentiels.magasins.GetMagasinApi;
 
 public class DetailProductAction extends org.apache.struts.action.Action{
 
@@ -20,14 +22,20 @@ public class DetailProductAction extends org.apache.struts.action.Action{
 		System.out.println("Action TestStruts");
 		DetailProductActionForm pform = (DetailProductActionForm) form;
 		int i = 0;
-		if (request.getParameter("pro")!=null){
-			i = Integer.parseInt(request.getParameter("pro"));
+		if (request.getParameter("prod")!=null){
+			i = Integer.parseInt(request.getParameter("prod"));
 		}
-
-		GetApiProduct objet = new GetApiProduct();
-		Product pro = objet.find(i);
-		request.setAttribute("pro", pro);
-
+		
+		System.out.println(request.getParameter("prod"));
+		
+		request.setAttribute("pid", request.getParameter("prod"));
+		
+		GetApiProduct pAPI = new GetApiProduct();
+		Product p = pAPI.find(i);
+		GetMagasinApi mAPI = new GetMagasinApi();
+		Magasin m = mAPI.find(i);
+		request.setAttribute("id", request.getParameter("prod"));
+		request.setAttribute("idEmplacement", request.getParameter("prod"));
 		return mapping.findForward(SUCCESS);
 
 	}

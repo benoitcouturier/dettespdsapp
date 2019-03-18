@@ -6,7 +6,7 @@
 <%@ include file="/html/common/header.html"%>
 <%@ include file="/jsp/common/nav.jsp"%>
 <%@ include
-	file="/html/referentiels/produitsVendus/listeProductLink_js_css.html"%>
+	file="/html/referentiels/produitsVendus/detailProductLink_js_css.html"%>
 
 <body>
 	<div id="page" class="container marginNavBar">
@@ -16,20 +16,21 @@
 			<div class="col-lg-12">
 				<h3>${prod.pname}</h3>
 				<p>
-					Type de produit : <span id="prodt_id"></span><br>
-				</p>
-				<p>
 					Magasin : <span id="store"></span><br>
+					<p>${mag.nom}</p>
 				</p>
 				<p>
-					Emplacement magasin : <span id="storelocation"></span><br>
+					Emplacement magasin : <span id="emplacement"></span><br>
+					<p>${mag.idEmplacement}</p>
 				</p>
 				<p>
 					Emplacement précis dans le magasin : <span id="departement"></span><br>
-				<span class="hiddenData" id="departement">${prod.departement}</span>
+				<p>${prod.departement}</p>
 				</p>
 			</div>
-
+			<span style="display : none;" id="pid">${pid}</span>
+			<span style="display : none;" id="id"></span>
+			<span style="display : none;" id="idEmplacement"></span>
 		</div>
 
 

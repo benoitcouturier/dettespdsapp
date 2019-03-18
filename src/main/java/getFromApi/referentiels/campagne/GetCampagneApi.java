@@ -35,7 +35,7 @@ public class GetCampagneApi {
 
 			String output;
 			String resp = new String();
-			System.out.println("Output from Server .... \n");s
+			System.out.println("Output from Server .... \n");
 			while ((output = br.readLine()) != null) {
 				System.out.println(output);
 				resp = resp+output;

@@ -15,9 +15,6 @@ import Entites.portail.gererSonCompteClient.Person;
 
 public class GetClientApi {
 
-
-
-//à modifier
 public Customer[] get() {
 
 		try {

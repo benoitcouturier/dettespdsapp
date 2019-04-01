@@ -1,0 +1,3 @@
+A mettre sur le FW pour acceder au git
+
+iptables -t nat -A PREROUTING -d 192.168.20.3 -p tcp --dport 22 -j DNAT --to-destination 10.10.4.3:22
